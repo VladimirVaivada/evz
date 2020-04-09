@@ -1,92 +1,135 @@
 <template>
-  <v-layout
-    column
-    justify-center
-    align-center
-  >
-    <v-flex
-      xs12
-      sm8
-      md6
-    >
-      <div class="text-center">
-        <logo />
-        <vuetify-logo />
-      </div>
-      <v-card>
-        <v-card-title class="headline">
-          Welcome to the Vuetify + Nuxt.js template
-        </v-card-title>
-        <v-card-text>
-          <p>Vuetify is a progressive Material Design component framework for Vue.js. It was designed to empower developers to create amazing applications.</p>
-          <p>
-            For more information on Vuetify, check out the <a
-              href="https://vuetifyjs.com"
-              target="_blank"
-            >
-              documentation
-            </a>.
-          </p>
-          <p>
-            If you have questions, please join the official <a
-              href="https://chat.vuetifyjs.com/"
-              target="_blank"
-              title="chat"
-            >
-              discord
-            </a>.
-          </p>
-          <p>
-            Find a bug? Report it on the github <a
-              href="https://github.com/vuetifyjs/vuetify/issues"
-              target="_blank"
-              title="contribute"
-            >
-              issue board
-            </a>.
-          </p>
-          <p>Thank you for developing with Vuetify and I look forward to bringing more exciting features in the future.</p>
-          <div class="text-xs-right">
-            <em><small>&mdash; John Leider</small></em>
-          </div>
-          <hr class="my-3">
-          <a
-            href="https://nuxtjs.org/"
-            target="_blank"
-          >
-            Nuxt Documentation
-          </a>
-          <br>
-          <a
-            href="https://github.com/nuxt/nuxt.js"
-            target="_blank"
-          >
-            Nuxt GitHub
-          </a>
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer />
-          <v-btn
-            color="primary"
-            nuxt
-            to="/inspire"
-          >
-            Continue
-          </v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-flex>
-  </v-layout>
+  <v-container>
+    <v-row align="start" dense>
+      <v-col lg="8" order-lg="2" class="pt-0">
+        <v-row dense>
+          <v-col cols="12" class="pt-0">
+            <v-card>
+              <v-toolbar color="red" dark dense elevation="10">
+                <v-spacer />
+                <v-toolbar-title class="text-uppercase subtitle-2">
+                  Текущие акции
+                </v-toolbar-title>
+                <v-spacer />
+              </v-toolbar>
+              <v-carousel show-arrows-on-hover height="300px" cycle progress>
+                <v-carousel-item
+                  v-for="(slide, i) in slides"
+                  :key="i"
+                  :src="slide.src"
+                >
+                  <v-container fluid height="100%">
+                    <v-card color="rgba(65,50,50,0.75)">
+                      <v-card-title
+                        class="text-uppercase"
+                        style="word-break: keep-all"
+                        v-html="slide.caption || 'Slide'"
+                      />
+                    </v-card>
+                  </v-container>
+                </v-carousel-item>
+              </v-carousel>
+            </v-card>
+          </v-col>
+
+          <v-col>
+            <v-card color="cyan">
+              <v-card-title>
+                Приветствуем Вас!
+              </v-card-title>
+              <v-card-subtitle>
+                Вы на главной странице.
+              </v-card-subtitle>
+              <v-card-text>
+                <v-card>
+                  <v-card-text>
+                    <p>
+                      Наша компания рада предложить Вам услуги по скупке,
+                      ремонту и продаже планшетов, мобильных телефонов и прочей
+                      подобной электроники.
+                    </p>
+                    <p>
+                      Мы дорожим своей репутацией и всегда стремимся предложить
+                      свойм клиетам самый высокий уровень сервиса, отличное
+                      качество работ самые лучшие цены.
+                    </p>
+                    <p>
+                      Ждём Вас в нашем салоне, а также будем счастливы ответить
+                      на Ваши вопросы по телефону либо электроным письмом.
+                    </p>
+                  </v-card-text>
+                </v-card>
+              </v-card-text>
+            </v-card>
+          </v-col>
+        </v-row>
+      </v-col>
+
+      <v-col lg="4" cols="12" order-lg="1" class="pt-0">
+        <v-row dense>
+          <v-col cols="12" class="pt-0">
+            <v-card color="green">
+              <v-card-title>Интерактивные сервисы</v-card-title>
+              <v-card-text>
+                <v-card>
+                  <v-card-text>
+                    Мы постоянно развиваемся и совершенствуем наши интерактивные
+                    сервисы созданные для Вашего удобства.
+                  </v-card-text>
+                  <v-divider />
+                  <v-card-text>
+                    Сервис <strong>"Мастер на выезд"</strong> позволит Вам,
+                    заполнив краткую анкету, вызвать нашего специалиста к Вам
+                    домой или в офис.
+                  </v-card-text>
+                  <v-card-actions>
+                    <v-btn color="yellow darken-1">Вызвать мастера</v-btn>
+                  </v-card-actions>
+                  <v-divider />
+                  <v-card-text>
+                    Сервис
+                    <strong>"Рассчитать стоимость ремонта"</strong> поможет Вам
+                    предварительно рассчитать стоимость ремонта Вашего
+                    устройства.
+                  </v-card-text>
+                  <v-card-actions>
+                    <v-btn color="red" dark>Рассчитать стоимость</v-btn>
+                  </v-card-actions>
+                </v-card>
+              </v-card-text>
+            </v-card>
+          </v-col>
+          <v-col cols="12">
+            <list-contacts />
+          </v-col>
+        </v-row>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-import VuetifyLogo from '~/components/VuetifyLogo.vue'
+import listContacts from '~/components/list-contacts.vue'
 
 export default {
-  components: {
-    Logo,
-    VuetifyLogo
+  components: { listContacts },
+  data() {
+    return {
+      slides: [
+        {
+          src: '/hero.optim.jpg',
+          caption:
+            'До 31 мая при любом ремонте - Защитное стекло в подарок<br />(с&nbsp; установкой)'
+        },
+        { src: '/hero.optim.jpg', caption: 'Слайд 2' },
+        { src: '/hero.optim.jpg', caption: 'Слайд 3' }
+      ]
+    }
+  },
+  head() {
+    return {
+      title: 'Главная'
+    }
   }
 }
 </script>
