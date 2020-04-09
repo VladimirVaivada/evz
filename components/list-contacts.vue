@@ -1,22 +1,22 @@
 <template>
-  <v-card color="yellow darken-1">
+  <v-card color="deep-orange" dark>
     <v-card-title>Наши контакты</v-card-title>
     <v-card-subtitle>Звоните по любым вопросам!</v-card-subtitle>
     <v-card-text>
-      <v-card>
+      <v-card light>
         <v-list dense>
-          <v-list-item v-for="(item, n) in contacts" :key="n">
+          <v-list-item v-for="(item, n) in contacts" :key="n" class="py-0 px-2">
             <v-list-item-content class="py-0">
               <div>
-                <v-icon class="pb-1">{{ item.icon }}</v-icon>
+                <v-icon class="pb-1" color="green">{{ item.icon }}</v-icon>
                 &nbsp;{{ item.text }}
               </div>
             </v-list-item-content>
           </v-list-item>
-          <v-list-item href="tel:+79119644740">
-            <v-list-item-content>
+          <v-list-item href="tel:+79119644740" class="py-0 px-2">
+            <v-list-item-content class="py-0">
               <div>
-                <v-icon>mdi-phone</v-icon>
+                <v-icon color="red">mdi-phone</v-icon>
                 &nbsp;+7(911) 964-47-40
               </div>
             </v-list-item-content>

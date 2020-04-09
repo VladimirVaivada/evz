@@ -1,7 +1,14 @@
 .<template>
-  <v-container fill-height style="flex-direction: column; align-items: end">
-    <v-card id="js-ymap" class="map">
-      <p style="position:absolute; top: 1em; left: 1em;" class="headline">
+  <v-container
+    fill-height
+    style="flex-direction: column; align-items: end"
+    class="pb-7"
+  >
+    <v-card id="js-ymap" class="map" color="orange">
+      <p
+        style="position:absolute; top: 1em; left: 1em;"
+        class="headline white--text"
+      >
         Загрузка карты...
       </p>
     </v-card>
@@ -35,7 +42,7 @@ export default {
 
       function initializeYandexMap(ymaps) {
         myMap = new ymaps.Map('js-ymap', {
-          center: [60.005566412353105, 30.296174999793482],
+          center: [60.0055664124, 30.296174999794],
           zoom: 17
         })
         myPlacemark = new ymaps.Placemark(

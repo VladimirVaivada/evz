@@ -1,25 +1,46 @@
 <template>
   <v-app>
-    <v-navigation-drawer v-model="drawer" :clipped="clipped" app>
+    <v-navigation-drawer v-model="drawer" :clipped="clipped" dense app>
       <v-list nav tile>
         <v-list-item
-          v-for="(item, i) in items"
+          v-for="(item, i) in pages"
           :key="i"
           :to="item.to"
           nuxt
           exact
+          color="deep-orange"
         >
           <v-list-item-action>
-            <v-icon>{{ item.icon }}</v-icon>
+            <v-icon color="deep-orange">{{ item.icon }}</v-icon>
           </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title v-text="item.title" />
           </v-list-item-content>
         </v-list-item>
+
         <v-divider class="mb-4" />
-        <v-list-item href="tel:+79119644740">
+
+        <v-list-item
+          v-for="(item, i) in services"
+          :key="i"
+          :to="item.to"
+          nuxt
+          exact
+          color="purple"
+        >
           <v-list-item-action>
-            <v-icon>mdi-cellphone-sound</v-icon>
+            <v-icon color="purple">{{ item.icon }}</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title v-text="item.title" />
+          </v-list-item-content>
+        </v-list-item>
+
+        <v-divider class="mb-4" />
+
+        <v-list-item href="tel:+79119644740" color="blue darken-2">
+          <v-list-item-action>
+            <v-icon color="red darken-1">mdi-cellphone-sound</v-icon>
           </v-list-item-action>
           <v-list-item-content>
             Позвонить мастеру
@@ -31,12 +52,18 @@
     <v-app-bar :clipped-left="clipped" color="primary" dark dense app>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-toolbar-title class="pl-0">
-        <span class="headline">{{ title }}</span>
+        <nuxt-link
+          to="/"
+          class="headline white--text"
+          style="text-decoration:none"
+        >
+          {{ title }}
+        </nuxt-link>
         <sub class="caption">&nbsp;ст.м.Пионерская</sub>
       </v-toolbar-title>
     </v-app-bar>
 
-    <v-content class="amber lighten-5">
+    <v-content class="amber lighten-4">
       <nuxt keep-alive :keep-alive-props="{ max: 2 }" />
     </v-content>
 
@@ -56,16 +83,11 @@ export default {
     return {
       clipped: true,
       drawer: null,
-      items: [
+      pages: [
         {
           icon: 'mdi-home',
           title: 'Главная страница',
           to: '/'
-        },
-        {
-          icon: 'mdi-home-edit-outline',
-          title: 'Мастер на дом',
-          to: '/call-me-home'
         },
         {
           icon: 'mdi-map',
@@ -76,6 +98,18 @@ export default {
           icon: 'mdi-information',
           title: 'О нас',
           to: '/about'
+        }
+      ],
+      services: [
+        {
+          icon: 'mdi-home-edit-outline',
+          title: 'Вызвать на дом',
+          to: '/call-me-home'
+        },
+        {
+          icon: 'mdi-calculator',
+          title: 'Рассчитать',
+          to: '/calculator'
         }
       ],
       icons: [

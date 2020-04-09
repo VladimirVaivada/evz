@@ -2,7 +2,7 @@
   <v-container>
     <v-card>
       <v-card-title>
-        О нашей компании
+        Вызов мастера на дом
       </v-card-title>
       <v-card-subtitle>Заготовка страницы</v-card-subtitle>
     </v-card>
@@ -10,7 +10,11 @@
 </template>
 
 <script>
-export default {}
+export default {
+  //
+}
 </script>
 
-<style></style>
+<style>
+/*  */
+</style>

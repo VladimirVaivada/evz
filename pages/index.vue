@@ -1,11 +1,11 @@
 <template>
   <v-container>
-    <v-row align="start" dense>
+    <v-row align="start">
       <v-col lg="8" order-lg="2" class="pt-0">
-        <v-row dense>
+        <v-row>
           <v-col cols="12" class="pt-0">
             <v-card>
-              <v-toolbar color="red" dark dense elevation="10">
+              <v-toolbar color="red darken-2" dark dense elevation="12">
                 <v-spacer />
                 <v-toolbar-title class="text-uppercase subtitle-2">
                   Текущие акции
@@ -33,15 +33,15 @@
           </v-col>
 
           <v-col>
-            <v-card color="cyan">
+            <v-card color="cyan darken-1" dark>
               <v-card-title>
                 Приветствуем Вас!
               </v-card-title>
               <v-card-subtitle>
-                Вы на главной странице.
+                Вы на главной странице
               </v-card-subtitle>
               <v-card-text>
-                <v-card>
+                <v-card light>
                   <v-card-text>
                     <p>
                       Наша компания рада предложить Вам услуги по скупке,
@@ -66,12 +66,13 @@
       </v-col>
 
       <v-col lg="4" cols="12" order-lg="1" class="pt-0">
-        <v-row dense>
+        <v-row>
           <v-col cols="12" class="pt-0">
-            <v-card color="green">
+            <v-card color="green" dark>
               <v-card-title>Интерактивные сервисы</v-card-title>
+              <v-card-subtitle>Всё для Вашего удобства</v-card-subtitle>
               <v-card-text>
-                <v-card>
+                <v-card light>
                   <v-card-text>
                     Мы постоянно развиваемся и совершенствуем наши интерактивные
                     сервисы созданные для Вашего удобства.
@@ -83,7 +84,15 @@
                     домой или в офис.
                   </v-card-text>
                   <v-card-actions>
-                    <v-btn color="yellow darken-1">Вызвать мастера</v-btn>
+                    <v-btn
+                      color="yellow darken-3"
+                      block
+                      nuxt
+                      to="/call-me-home"
+                      dark
+                    >
+                      Вызвать мастера
+                    </v-btn>
                   </v-card-actions>
                   <v-divider />
                   <v-card-text>
@@ -93,7 +102,15 @@
                     устройства.
                   </v-card-text>
                   <v-card-actions>
-                    <v-btn color="red" dark>Рассчитать стоимость</v-btn>
+                    <v-btn
+                      color="red darken-2"
+                      block
+                      nuxt
+                      to="/calculator"
+                      dark
+                    >
+                      Рассчитать стоимость
+                    </v-btn>
                   </v-card-actions>
                 </v-card>
               </v-card-text>
