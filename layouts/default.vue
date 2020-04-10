@@ -4,7 +4,7 @@
       <v-list nav tile>
         <v-list-item
           v-for="(item, i) in pages"
-          :key="i"
+          :key="i + item.title"
           :to="item.to"
           nuxt
           exact
@@ -22,7 +22,7 @@
 
         <v-list-item
           v-for="(item, i) in services"
-          :key="i"
+          :key="i + item.title"
           :to="item.to"
           nuxt
           exact
