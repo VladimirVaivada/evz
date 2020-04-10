@@ -5,19 +5,25 @@
     <v-card-text>
       <v-card light>
         <v-list dense>
-          <v-list-item v-for="(item, n) in contacts" :key="n" class="py-0 px-2">
+          <v-list-item
+            v-for="(item, n) in contacts"
+            :key="n"
+            :to="item.link || false"
+          >
             <v-list-item-content class="py-0">
-              <div>
-                <v-icon class="pb-1" color="green">{{ item.icon }}</v-icon>
-                &nbsp;{{ item.text }}
+              <div style="display:flex; align-items:center">
+                <v-icon class="pb-1" color="green">
+                  {{ item.icon }}
+                </v-icon>
+                &nbsp;<span>{{ item.text }}</span>
               </div>
             </v-list-item-content>
           </v-list-item>
-          <v-list-item href="tel:+79119644740" class="py-0 px-2">
+          <v-list-item href="tel:+79119644740">
             <v-list-item-content class="py-0">
               <div>
                 <v-icon color="red">mdi-phone</v-icon>
-                &nbsp;+7(911) 964-47-40
+                +7(911) 964-47-40
               </div>
             </v-list-item-content>
           </v-list-item>
@@ -33,7 +39,11 @@ export default {
     return {
       contacts: [
         { icon: 'mdi-clock', text: 'с 11:00 до 20:00, ежедневно;' },
-        { icon: 'mdi-home', text: 'Коломяжский пр., 26, м.Пионерская;' }
+        {
+          icon: 'mdi-home',
+          text: 'Коломяжский пр., д.26, м.Пионерская;',
+          link: '/map'
+        }
       ]
     }
   }
