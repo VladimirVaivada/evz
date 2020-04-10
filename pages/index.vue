@@ -1,9 +1,9 @@
 <template>
   <v-container>
     <v-row align="start">
-      <v-col lg="8" order-lg="2" class="pt-0">
+      <v-col lg="8" order-lg="2">
         <v-row>
-          <v-col cols="12" class="pt-0">
+          <v-col cols="12">
             <v-card>
               <v-toolbar color="red darken-2" dark dense elevation="12">
                 <v-spacer />
@@ -23,7 +23,7 @@
                       <v-card-title
                         class="text-uppercase"
                         style="word-break: keep-all"
-                        v-html="slide.caption || 'Slide'"
+                        v-html="slide.caption || 'Слайд без заголовка'"
                       />
                     </v-card>
                   </v-container>
