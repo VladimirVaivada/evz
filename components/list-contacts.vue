@@ -1,5 +1,5 @@
 <template>
-  <v-card color="deep-orange" dark>
+  <v-card color="primary">
     <v-card-title>Наши контакты</v-card-title>
     <v-card-subtitle>Звоните по любым вопросам!</v-card-subtitle>
     <v-card-text>
@@ -8,9 +8,9 @@
           <v-list-item
             v-for="(item, n) in contacts"
             :key="n"
-            :to="item.link || false"
+            :to="item.link || ''"
           >
-            <v-list-item-content class="py-0">
+            <v-list-item-content>
               <div style="display:flex; align-items:center">
                 <v-icon class="pb-1" color="green">
                   {{ item.icon }}
@@ -20,7 +20,7 @@
             </v-list-item-content>
           </v-list-item>
           <v-list-item href="tel:+79119644740">
-            <v-list-item-content class="py-0">
+            <v-list-item-content>
               <div>
                 <v-icon color="red">mdi-phone</v-icon>
                 +7(911) 964-47-40
@@ -41,7 +41,7 @@ export default {
         { icon: 'mdi-clock', text: 'с 11:00 до 20:00, ежедневно;' },
         {
           icon: 'mdi-home',
-          text: 'Коломяжский пр., д.26, м.Пионерская;',
+          text: 'Коломяжский пр., д.26, ст.м.Пионерская;',
           link: '/map'
         }
       ]

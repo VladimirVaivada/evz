@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-navigation-drawer v-model="drawer" :clipped="clipped" dense app>
+    <v-navigation-drawer v-model="drawer" :clipped="clipped" light dense app>
       <v-list nav tile>
         <v-list-item
           v-for="(item, i) in pages"
@@ -8,10 +8,10 @@
           :to="item.to"
           nuxt
           exact
-          color="deep-orange"
+          color="primary darken-2"
         >
           <v-list-item-action>
-            <v-icon color="deep-orange">{{ item.icon }}</v-icon>
+            <v-icon color="primary">{{ item.icon }}</v-icon>
           </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title v-text="item.title" />
@@ -26,10 +26,10 @@
           :to="item.to"
           nuxt
           exact
-          color="purple"
+          color="secondary"
         >
           <v-list-item-action>
-            <v-icon color="purple">{{ item.icon }}</v-icon>
+            <v-icon color="secondary">{{ item.icon }}</v-icon>
           </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title v-text="item.title" />
@@ -38,9 +38,9 @@
 
         <v-divider class="mb-4" />
 
-        <v-list-item href="tel:+79119644740" color="blue darken-2">
+        <v-list-item href="tel:+79119644740">
           <v-list-item-action>
-            <v-icon color="red darken-1">mdi-cellphone-sound</v-icon>
+            <v-icon color="red">mdi-cellphone-sound</v-icon>
           </v-list-item-action>
           <v-list-item-content>
             Позвонить мастеру
@@ -49,9 +49,9 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-app-bar :clipped-left="clipped" color="primary" dark dense app>
+    <v-app-bar :clipped-left="clipped" color="primary darken-2" app>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-toolbar-title class="pl-0">
+      <v-toolbar-title>
         <nuxt-link
           to="/"
           class="headline white--text"
@@ -63,15 +63,21 @@
       </v-toolbar-title>
     </v-app-bar>
 
-    <v-content class="amber lighten-4">
-      <nuxt keep-alive :keep-alive-props="{ max: 2 }" />
+    <v-content class="blue-grey">
+      <nuxt />
+      <!-- keep-alive :keep-alive-props="{ max: 2 }" -->
     </v-content>
 
-    <v-footer color="primary" elevation="16" dark app>
+    <v-footer color="primary" elevation="16" app>
       <span>&copy; {{ new Date().getFullYear() }}</span>
       <v-spacer />
-      <v-btn v-for="icon in icons" :key="icon" class="white--text" icon>
-        <v-icon size="24px">{{ icon }}</v-icon>
+      <v-btn
+        v-for="(item, n) in social"
+        :key="n + item.link"
+        :href="item.link"
+        icon
+      >
+        <v-icon size="24px">{{ item.icon }}</v-icon>
       </v-btn>
     </v-footer>
   </v-app>
@@ -112,12 +118,12 @@ export default {
           to: '/calculator'
         }
       ],
-      icons: [
-        'mdi-vk',
-        'mdi-telegram',
-        'mdi-instagram',
-        'mdi-twitter',
-        'mdi-facebook'
+      social: [
+        { link: 'https://vk.com/eurosvaz', icon: 'mdi-vk' },
+        { link: '', icon: 'mdi-telegram' },
+        { link: '', icon: 'mdi-instagram' },
+        { link: '', icon: 'mdi-twitter' },
+        { link: '', icon: 'mdi-facebook' }
       ],
       title: 'ЕВРОСВЯЗЬ'
     }

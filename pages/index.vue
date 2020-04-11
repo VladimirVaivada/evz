@@ -1,25 +1,29 @@
 <template>
   <v-container>
     <v-row align="start">
-      <v-col lg="8" order-lg="2">
+      <v-col lg="8" order-lg="2" class="pt-lg-2">
         <v-row>
-          <v-col cols="12">
+          <v-col cols="12" class="pt-lg-2">
             <v-card>
-              <v-toolbar color="red darken-2" dark dense elevation="12">
-                <v-spacer />
-                <v-toolbar-title class="text-uppercase subtitle-2">
+              <v-toolbar color="primary" dense elevation="12">
+                <v-toolbar-title class="title">
                   Текущие акции
                 </v-toolbar-title>
-                <v-spacer />
               </v-toolbar>
-              <v-carousel show-arrows-on-hover height="300px" cycle progress>
+              <v-carousel
+                :show-arrows="false"
+                height="300px"
+                cycle
+                progress
+                progress-color="secondary"
+              >
                 <v-carousel-item
                   v-for="(slide, i) in slides"
                   :key="i"
                   :src="slide.src"
                 >
                   <v-container fluid height="100%">
-                    <v-card color="rgba(65,50,50,0.75)">
+                    <v-card color="rgba(50,50,60,0.3)">
                       <v-card-title
                         class="text-uppercase"
                         style="word-break: keep-all"
@@ -33,7 +37,7 @@
           </v-col>
 
           <v-col>
-            <v-card color="cyan darken-1" dark>
+            <v-card color="primary">
               <v-card-title>
                 Приветствуем Вас!
               </v-card-title>
@@ -46,7 +50,7 @@
                     <p>
                       Наша компания рада предложить Вам услуги по скупке,
                       ремонту и продаже планшетов, мобильных телефонов и прочей
-                      подобной электроники.
+                      цифровой техники.
                     </p>
                     <p>
                       Мы дорожим своей репутацией и всегда стремимся предложить
@@ -65,10 +69,10 @@
         </v-row>
       </v-col>
 
-      <v-col lg="4" cols="12" order-lg="1" class="pt-0">
+      <v-col lg="4" cols="12" order-lg="1" class="pt-lg-2 pt-0">
         <v-row>
-          <v-col cols="12" class="pt-0">
-            <v-card color="green" dark>
+          <v-col cols="12" class="pt-lg-2 pt-0">
+            <v-card color="primary">
               <v-card-title>Интерактивные сервисы</v-card-title>
               <v-card-subtitle>Всё для Вашего удобства</v-card-subtitle>
               <v-card-text>
@@ -85,12 +89,14 @@
                   </v-card-text>
                   <v-card-actions>
                     <v-btn
-                      color="yellow darken-3"
+                      color="secondary"
+                      style="justify-content: flex-start"
                       block
                       nuxt
                       to="/call-me-home"
                       dark
                     >
+                      <v-icon small class="pr-2">mdi-phone</v-icon>
                       Вызвать мастера
                     </v-btn>
                   </v-card-actions>
@@ -103,12 +109,14 @@
                   </v-card-text>
                   <v-card-actions>
                     <v-btn
-                      color="red darken-2"
+                      color="secondary"
+                      style="justify-content: flex-start"
                       block
                       nuxt
                       to="/calculator"
                       dark
                     >
+                      <v-icon small class="pr-2">mdi-calculator</v-icon>
                       Рассчитать стоимость
                     </v-btn>
                   </v-card-actions>
@@ -132,6 +140,7 @@ export default {
   components: { listContacts },
   data() {
     return {
+      showArrows: false,
       slides: [
         {
           src: '/hero.optim.jpg',
