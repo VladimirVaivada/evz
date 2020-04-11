@@ -52,10 +52,10 @@
             ></v-card>
 
             <v-btn color="primary" @click="nextStep(n)">
-              Continue
+              Далее
             </v-btn>
 
-            <v-btn text>Cancel</v-btn>
+            <v-btn text>Отмена</v-btn>
           </v-stepper-content>
         </v-stepper-items>
       </template>
