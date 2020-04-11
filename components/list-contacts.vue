@@ -12,7 +12,7 @@
           >
             <v-list-item-content>
               <div style="display:flex; align-items:center">
-                <v-icon class="pb-1" color="green">
+                <v-icon class="py-1" color="green">
                   {{ item.icon }}
                 </v-icon>
                 &nbsp;<span>{{ item.text }}</span>
@@ -22,7 +22,7 @@
           <v-list-item href="tel:+79119644740">
             <v-list-item-content>
               <div>
-                <v-icon color="red">mdi-phone</v-icon>
+                <v-icon color="red" class="py-1">mdi-phone</v-icon>
                 +7(911) 964-47-40
               </div>
             </v-list-item-content>

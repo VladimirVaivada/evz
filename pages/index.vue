@@ -23,7 +23,7 @@
                   :src="slide.src"
                 >
                   <v-container fluid height="100%">
-                    <v-card color="rgba(50,50,60,0.3)">
+                    <v-card color="rgba(50,50,60,0.3)" tile>
                       <v-card-title
                         class="text-uppercase"
                         style="word-break: keep-all"

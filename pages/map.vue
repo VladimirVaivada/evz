@@ -2,7 +2,7 @@
   <v-container
     fill-height
     style="flex-direction: column; align-items: end"
-    class="pb-7"
+    class="py-5"
   >
     <v-card id="js-ymap" class="map" color="orange">
       <p
