@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-card>
+    <v-card light>
       <v-card-title>
         Вызов мастера на дом
       </v-card-title>

@@ -1,3 +1,5 @@
+import colors from 'vuetify/lib/util/colors'
+
 export default {
   mode: 'universal',
   /*
@@ -69,8 +71,17 @@ export default {
    ** https://github.com/nuxt-community/vuetify-module
    */
   vuetify: {
-    customVariables: ['~/assets/variables.scss'],
-    optionsPath: '~/vuetify.options.js'
+    // customVariables: ['~/assets/variables.scss'],
+    theme: {
+      dark: true,
+      themes: {
+        dark: {
+          primary: colors.orange,
+          secondary: colors.blue.darken3,
+          anchor: colors.blue.darken2
+        }
+      }
+    }
   },
 
   /*

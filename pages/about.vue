@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-card>
+    <v-card light>
       <v-card-title>
         О нашей компании
       </v-card-title>
