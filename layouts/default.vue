@@ -128,10 +128,10 @@ export default {
       ],
       social: [
         { link: 'https://vk.com/eurosvaz', icon: 'mdi-vk' },
-        { link: '', icon: 'mdi-telegram' },
-        { link: '', icon: 'mdi-instagram' },
-        { link: '', icon: 'mdi-twitter' },
-        { link: '', icon: 'mdi-facebook' }
+        {
+          link: 'https://www.instagram.com/p/B-fYCVFIKRW/?igshid=escfq5u0yzog',
+          icon: 'mdi-instagram'
+        }
       ],
       title: 'ЕВРОСВЯЗЬ'
     }
