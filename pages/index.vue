@@ -1,9 +1,9 @@
 <template>
   <v-container>
     <v-row align="start">
-      <v-col lg="8" order-lg="2" class="pt-lg-2">
+      <v-col lg="8" order-lg="2" class="pt-2">
         <v-row>
-          <v-col cols="12" class="pt-lg-2">
+          <v-col cols="12" class="pt-2">
             <v-card>
               <v-toolbar color="primary" dense elevation="12">
                 <v-toolbar-title class="title">

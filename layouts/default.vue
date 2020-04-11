@@ -3,8 +3,8 @@
     <v-navigation-drawer v-model="drawer" :clipped="clipped" light dense app>
       <v-list nav tile>
         <v-list-item
-          v-for="(item, i) in pages"
-          :key="i + item.title"
+          v-for="item in pages"
+          :key="item.title"
           :to="item.to"
           nuxt
           exact
@@ -22,7 +22,7 @@
 
         <v-list-item
           v-for="(item, i) in services"
-          :key="i + item.title"
+          :key="i"
           :to="item.to"
           nuxt
           exact
@@ -51,7 +51,7 @@
 
     <v-app-bar :clipped-left="clipped" color="primary darken-2" app>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-toolbar-title>
+      <v-toolbar-title class="pl-1">
         <nuxt-link
           to="/"
           class="headline white--text"
