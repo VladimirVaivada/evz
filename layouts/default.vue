@@ -1,6 +1,13 @@
 <template>
   <v-app>
-    <v-navigation-drawer v-model="drawer" :clipped="clipped" light dense app>
+    <v-navigation-drawer
+      v-model="drawer"
+      :clipped="clipped"
+      light
+      right
+      dense
+      app
+    >
       <v-list nav tile>
         <v-list-item
           v-for="item in pages"
@@ -49,9 +56,8 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-app-bar :clipped-left="clipped" color="primary darken-2" app>
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-toolbar-title class="pl-1">
+    <v-app-bar :clipped-right="clipped" color="primary darken-2" app>
+      <v-toolbar-title class="pr-1">
         <nuxt-link
           to="/"
           class="headline white--text"
@@ -61,6 +67,8 @@
         </nuxt-link>
         <sub class="caption">&nbsp;ст.м.Пионерская</sub>
       </v-toolbar-title>
+      <v-spacer />
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
     </v-app-bar>
 
     <v-content class="blue-grey">
