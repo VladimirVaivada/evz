@@ -66,6 +66,8 @@ export default {
    */
   axios: {},
 
+  eslint: { fix:true },
+
   /*
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module
