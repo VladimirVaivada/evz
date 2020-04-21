@@ -57,7 +57,8 @@ export default {
    */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+      '@nuxtjs/firebase',
   ],
 
   /*
@@ -66,6 +67,28 @@ export default {
    */
   axios: {},
 
+  /*
+   ** Firebase module configuration
+   ** https://firebase.nuxtjs.org/guide/getting-started/#configure
+   */
+  firebase: {
+    config: {
+      apiKey: "AIzaSyBJ3qq7g0UhFe15iifgp1t4dHMEqEQ6jGE",
+      authDomain: "evz-site.firebaseapp.com",
+      databaseURL: "https://evz-site.firebaseio.com",
+      projectId: "evz-site",
+      storageBucket: "evz-site.appspot.com",
+      messagingSenderId: "187721311188",
+      appId: "1:187721311188:web:499705e4d16fbf221fac41"
+    },
+    services: {
+      firestore:true
+    }
+  },
+
+  /*
+   ** ESlint module configuration
+   */
   eslint: { fix:true },
 
   /*
@@ -75,9 +98,9 @@ export default {
   vuetify: {
     // customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: true,
+      dark: false,
       themes: {
-        dark: {
+        light: {
           primary: colors.orange,
           secondary: colors.blue.darken3,
           anchor: colors.blue.darken2

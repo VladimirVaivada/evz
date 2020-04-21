@@ -1,13 +1,6 @@
 <template>
   <v-app>
-    <v-navigation-drawer
-      v-model="drawer"
-      :clipped="clipped"
-      light
-      right
-      dense
-      app
-    >
+    <v-navigation-drawer v-model="drawer" :clipped="clipped" light right app>
       <v-list nav tile>
         <v-list-item
           v-for="item in pages"
@@ -56,7 +49,7 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-app-bar :clipped-right="clipped" color="primary darken-2" app>
+    <v-app-bar :clipped-right="clipped" color="primary darken-2" dark app>
       <v-toolbar-title class="pr-1">
         <nuxt-link
           to="/"
@@ -72,11 +65,11 @@
     </v-app-bar>
 
     <v-content class="blue-grey">
-      <nuxt />
-      <!-- keep-alive :keep-alive-props="{ max: 2 }" -->
+      <nuxt keep-alive :keep-alive-props="{ max: 2 }" />
+      <!--  -->
     </v-content>
 
-    <v-footer color="primary" elevation="16" app>
+    <v-footer color="primary" elevation="16" dark app>
       <span>&copy; {{ new Date().getFullYear() }}</span>
       <v-spacer />
       <v-btn

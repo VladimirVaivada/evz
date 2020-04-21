@@ -4,7 +4,7 @@
       <v-col lg="8" order-lg="2" class="pt-2">
         <v-row>
           <v-col cols="12" class="pt-2">
-            <v-card>
+            <v-card dark>
               <v-toolbar color="primary" dense elevation="12">
                 <v-toolbar-title class="title">
                   Текущие акции
@@ -37,7 +37,7 @@
           </v-col>
 
           <v-col>
-            <v-card color="primary">
+            <v-card color="primary" dark>
               <v-card-title>
                 Приветствуем Вас!
               </v-card-title>
@@ -72,7 +72,7 @@
       <v-col lg="4" cols="12" order-lg="1" class="pt-lg-2 pt-0">
         <v-row>
           <v-col cols="12" class="pt-lg-2 pt-0">
-            <v-card color="primary">
+            <v-card color="primary" dark>
               <v-card-title>Интерактивные сервисы</v-card-title>
               <v-card-subtitle>Всё для Вашего удобства</v-card-subtitle>
               <v-card-text>

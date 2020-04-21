@@ -1,5 +1,5 @@
 <template>
-  <v-card color="primary">
+  <v-card color="primary" dark>
     <v-card-title>Наши контакты</v-card-title>
     <v-card-subtitle>Звоните по любым вопросам!</v-card-subtitle>
     <v-card-text>
