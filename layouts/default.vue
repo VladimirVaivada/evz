@@ -18,7 +18,7 @@
           </v-list-item-content>
         </v-list-item>
 
-        <v-divider class="mb-4" />
+        <v-divider />
 
         <v-list-item
           v-for="(item, i) in services"
@@ -27,6 +27,7 @@
           nuxt
           exact
           color="secondary"
+          class="my-1"
         >
           <v-list-item-action>
             <v-icon color="secondary">{{ item.icon }}</v-icon>
@@ -36,7 +37,7 @@
           </v-list-item-content>
         </v-list-item>
 
-        <v-divider class="mb-4" />
+        <v-divider />
 
         <v-list-item href="tel:+79119644740">
           <v-list-item-action>
@@ -108,11 +109,11 @@ export default {
         }
       ],
       services: [
-        {
-          icon: 'mdi-home-edit-outline',
-          title: 'Вызвать на дом',
-          to: '/call-me-home'
-        },
+        //        {
+        //          icon: 'mdi-home-edit-outline',
+        //          title: 'Вызвать на дом',
+        //          to: '/call-me-home'
+        //        },
         {
           icon: 'mdi-calculator',
           title: 'Рассчитать',

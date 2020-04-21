@@ -1,8 +1,8 @@
-.<template>
+<template>
   <v-container
     fill-height
     style="flex-direction: column; align-items: end"
-    class="py-5"
+    class="py-6"
   >
     <v-card id="js-ymap" class="map" color="orange">
       <p

@@ -1,9 +1,9 @@
 <template>
   <v-container>
     <v-row align="start">
-      <v-col lg="8" order-lg="2" class="pt-2">
+      <v-col lg="8" order-lg="2" class="pt-0">
         <v-row>
-          <v-col cols="12" class="pt-2">
+          <v-col cols="12">
             <v-card dark>
               <v-toolbar color="primary" dense elevation="12">
                 <v-toolbar-title class="title">
@@ -69,9 +69,9 @@
         </v-row>
       </v-col>
 
-      <v-col lg="4" cols="12" order-lg="1" class="pt-lg-2 pt-0">
+      <v-col lg="4" cols="12" order-lg="1" class="pt-lg-3 pt-0">
         <v-row>
-          <v-col cols="12" class="pt-lg-2 pt-0">
+          <v-col cols="12" class="pt-0">
             <v-card color="primary" dark>
               <v-card-title>Интерактивные сервисы</v-card-title>
               <v-card-subtitle>Всё для Вашего удобства</v-card-subtitle>
@@ -81,26 +81,26 @@
                     Мы постоянно развиваемся и совершенствуем наши интерактивные
                     сервисы созданные для Вашего удобства.
                   </v-card-text>
-                  <v-divider />
-                  <v-card-text>
-                    Сервис <strong>"Мастер на выезд"</strong> позволит Вам,
-                    заполнив краткую анкету, вызвать нашего специалиста к Вам
-                    домой или в офис.
-                  </v-card-text>
-                  <v-card-actions>
-                    <v-btn
-                      color="secondary"
-                      style="justify-content: flex-start"
-                      block
-                      nuxt
-                      to="/call-me-home"
-                      dark
-                    >
-                      <v-icon small class="pr-2">mdi-phone</v-icon>
-                      Вызвать мастера
-                    </v-btn>
-                  </v-card-actions>
-                  <v-divider />
+                  <!-- <v-divider /> -->
+                  <!-- <v-card-text> -->
+                  <!--   Сервис <strong>"Мастер на выезд"</strong> позволит Вам, -->
+                  <!--   заполнив краткую анкету, вызвать нашего специалиста к Вам -->
+                  <!--   домой или в офис. -->
+                  <!-- </v-card-text> -->
+                  <!-- <v-card-actions> -->
+                  <!--   <v-btn -->
+                  <!--     color="secondary" -->
+                  <!--     style="justify-content: flex-start" -->
+                  <!--     block -->
+                  <!--     nuxt -->
+                  <!--     to="/call-me-home" -->
+                  <!--     dark -->
+                  <!--   > -->
+                  <!--     <v-icon small class="pr-2">mdi-phone</v-icon> -->
+                  <!--     Вызвать мастера -->
+                  <!--   </v-btn> -->
+                  <!-- </v-card-actions> -->
+                  <!-- <v-divider /> -->
                   <v-card-text>
                     Сервис
                     <strong>"Рассчитать стоимость ремонта"</strong> поможет Вам
@@ -146,9 +146,9 @@ export default {
           src: '/hero.optim.jpg',
           caption:
             'До 31 мая при любом ремонте - Защитное стекло в подарок<br />(с&nbsp; установкой)'
-        },
-        { src: '/hero.optim.jpg', caption: 'Слайд 2' },
-        { src: '/hero.optim.jpg', caption: 'Слайд 3' }
+        }
+        //        { src: '/hero.optim.jpg', caption: 'Слайд 2' },
+        //        { src: '/hero.optim.jpg', caption: 'Слайд 3' }
       ]
     }
   },
