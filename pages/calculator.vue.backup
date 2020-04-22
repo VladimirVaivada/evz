@@ -9,6 +9,9 @@
                 Калькулятор
               </v-toolbar-title>
             </v-toolbar>
+            <v-card-title>
+              Стоимость работ
+            </v-card-title>
             <v-card-text>
               <v-select
                 id="trademark"

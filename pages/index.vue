@@ -81,7 +81,7 @@
                     Мы постоянно развиваемся и совершенствуем наши интерактивные
                     сервисы созданные для Вашего удобства.
                   </v-card-text>
-                  <!-- <v-divider /> -->
+                  <v-divider />
                   <!-- <v-card-text> -->
                   <!--   Сервис <strong>"Мастер на выезд"</strong> позволит Вам, -->
                   <!--   заполнив краткую анкету, вызвать нашего специалиста к Вам -->
@@ -103,9 +103,27 @@
                   <!-- <v-divider /> -->
                   <v-card-text>
                     Сервис
-                    <strong>"Рассчитать стоимость ремонта"</strong> поможет Вам
-                    предварительно рассчитать стоимость ремонта Вашего
-                    устройства.
+                    <strong>"Запчасти"</strong> поможет подобрать детали
+                    необходимые для ремонта Вашего устройства и узнать их
+                    атуальную стоимость.
+                  </v-card-text>
+                  <v-card-actions>
+                    <v-btn
+                      color="secondary"
+                      style="justify-content: flex-start"
+                      block
+                      nuxt
+                      to="/parts"
+                      dark
+                    >
+                      <v-icon class="pr-2">mdi-cellphone-cog</v-icon>
+                      Запчасти
+                    </v-btn>
+                  </v-card-actions>
+                  <v-card-text>
+                    Сервис
+                    <strong>"Калькулятор"</strong> поможет Вам предварительно
+                    рассчитать стоимость ремонта Вашего устройства.
                   </v-card-text>
                   <v-card-actions>
                     <v-btn
@@ -116,8 +134,8 @@
                       to="/calculator"
                       dark
                     >
-                      <v-icon small class="pr-2">mdi-calculator</v-icon>
-                      Рассчитать стоимость
+                      <v-icon class="pr-2">mdi-calculator</v-icon>
+                      Калькулятор
                     </v-btn>
                   </v-card-actions>
                 </v-card>

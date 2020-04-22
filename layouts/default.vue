@@ -115,8 +115,13 @@ export default {
         //          to: '/call-me-home'
         //        },
         {
+          icon: 'mdi-cellphone-cog',
+          title: 'Запчасти',
+          to: '/parts'
+        },
+        {
           icon: 'mdi-calculator',
-          title: 'Рассчитать',
+          title: 'Калькулятор',
           to: '/calculator'
         }
       ],
