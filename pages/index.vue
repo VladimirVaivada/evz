@@ -27,8 +27,9 @@
                       <v-card-title
                         class="text-uppercase"
                         style="word-break: keep-all"
-                        v-html="slide.caption || 'Слайд без заголовка'"
-                      />
+                      >
+                        {{ slide.caption || 'Слайд без заголовка' }}
+                      </v-card-title>
                     </v-card>
                   </v-container>
                 </v-carousel-item>
@@ -103,8 +104,8 @@
                   <!-- <v-divider /> -->
                   <v-card-text>
                     Сервис
-                    <strong>"Запчасти"</strong> поможет подобрать детали
-                    необходимые для ремонта Вашего устройства и узнать их
+                    <strong>"Каталог"</strong> поможет подобрать аксессуары и
+                    детали необходимые для ремонта Вашего устройства и узнать их
                     атуальную стоимость.
                   </v-card-text>
                   <v-card-actions>
@@ -117,7 +118,7 @@
                       dark
                     >
                       <v-icon class="pr-2">mdi-cellphone-cog</v-icon>
-                      Запчасти
+                      Каталог
                     </v-btn>
                   </v-card-actions>
                   <v-card-text>
@@ -163,7 +164,7 @@ export default {
         {
           src: '/hero.optim.jpg',
           caption:
-            'До 31 мая при любом ремонте - Защитное стекло в подарок<br />(с&nbsp; установкой)'
+            'До 31 мая при любом ремонте - Защитное стекло в подарок (с установкой)'
         }
         //        { src: '/hero.optim.jpg', caption: 'Слайд 2' },
         //        { src: '/hero.optim.jpg', caption: 'Слайд 3' }

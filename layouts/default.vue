@@ -116,7 +116,7 @@ export default {
         //        },
         {
           icon: 'mdi-cellphone-cog',
-          title: 'Запчасти',
+          title: 'Каталог',
           to: '/parts'
         },
         {

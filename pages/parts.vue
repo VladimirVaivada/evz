@@ -3,32 +3,16 @@
     <v-row>
       <v-col cols="12">
         <v-card>
-          <v-toolbar color="secondary" flat dark>
-            <v-toolbar-title>Запчасти</v-toolbar-title>
+          <v-toolbar color="secondary" dark>
+            <v-toolbar-title>
+              Каталог
+            </v-toolbar-title>
           </v-toolbar>
-          <v-card-text>
-            Для наших любимых "самоделкиных".<br />Мы запускаем продажу
-            запчастей для самостоятельной установки!
-          </v-card-text>
-          <v-card-text>
-            <v-card>
-              <v-card-title>
-                <v-btn disabled outlined>
-                  <v-icon>mdi-apple</v-icon>&nbsp;iPhone
-                </v-btn>
-              </v-card-title>
-              <v-card-text class="d-flex flex-wrap">
-                <v-card
-                  v-for="model in models"
-                  :key="model"
-                  class="mr-4 mb-4"
-                  width="180px"
-                >
-                  <v-img :src="`/parts/xs/prt_${model}__shleif_xs.jpg`"></v-img>
-                </v-card>
-              </v-card-text>
-            </v-card>
-          </v-card-text>
+          <my-expansion
+            v-for="section in db"
+            :key="section[0].id"
+            :items="section"
+          />
         </v-card>
       </v-col>
     </v-row>
@@ -36,17 +20,55 @@
 </template>
 
 <script>
+import accumulators from '~/assets/data/price_moba_23-04-20__accumulators.js'
+import accessories from '~/assets/data/price_moba_23-04-20__accessories.js'
+import displays from '~/assets/data/price_moba_23-04-20__displays.js'
+import parts from '~/assets/data/price_moba_23-04-20__parts.js'
+import memoryCards from '~/assets/data/price_moba_23-04-20__memory-cards.js'
+import cases from '~/assets/data/price_moba_23-04-20__cases.js'
+import caseParts from '~/assets/data/price_moba_23-04-20__case-parts.js'
+import glasses from '~/assets/data/price_moba_23-04-20__glasses.js'
+import matrixes from '~/assets/data/price_moba_23-04-20__matrixes.js'
+import touchscreens from '~/assets/data/price_moba_23-04-20__touchscreens.js'
+import microschemes from '~/assets/data/price_moba_23-04-20__microschemes.js'
+import shleifses from '~/assets/data/price_moba_23-04-20__shleifses.js'
+import tools from '~/assets/data/price_moba_23-04-20__tools.js'
+import tvSets from '~/assets/data/price_moba_23-04-20__tv-sets.js'
+
+import myExpansion from '~/components/my-expansion.vue'
+
 export default {
+  components: {
+    'my-expansion': myExpansion
+  },
   data() {
     return {
-      models: [
-        'iphone5',
-        'iphone6',
-        'iphone6plus',
-        'iphone6s',
-        'iphone6splus',
-        'iphone7'
-      ]
+      db: [
+        accumulators,
+        accessories,
+        displays,
+        parts,
+        memoryCards,
+        cases,
+        caseParts,
+        glasses,
+        matrixes,
+        touchscreens,
+        microschemes,
+        shleifses,
+        tools,
+        tvSets
+      ],
+      selection: []
+    }
+  },
+  computed: {
+    cost() {
+      let x = 0
+      this.selection.forEach((item) => {
+        x += Number(item.price)
+      })
+      return x || 'Выберите товар...'
     }
   }
 }
