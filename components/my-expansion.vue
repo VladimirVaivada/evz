@@ -1,5 +1,5 @@
 <template>
-  <v-expansion-panels focusable hover>
+  <v-expansion-panels focusable hover transition="false">
     <v-expansion-panel v-for="item in items" :key="item.id">
       <v-expansion-panel-header>{{ item.name }}</v-expansion-panel-header>
       <v-expansion-panel-content v-if="item.children">

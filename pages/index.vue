@@ -83,25 +83,6 @@
                     сервисы созданные для Вашего удобства.
                   </v-card-text>
                   <v-divider />
-                  <!-- <v-card-text> -->
-                  <!--   Сервис <strong>"Мастер на выезд"</strong> позволит Вам, -->
-                  <!--   заполнив краткую анкету, вызвать нашего специалиста к Вам -->
-                  <!--   домой или в офис. -->
-                  <!-- </v-card-text> -->
-                  <!-- <v-card-actions> -->
-                  <!--   <v-btn -->
-                  <!--     color="secondary" -->
-                  <!--     style="justify-content: flex-start" -->
-                  <!--     block -->
-                  <!--     nuxt -->
-                  <!--     to="/call-me-home" -->
-                  <!--     dark -->
-                  <!--   > -->
-                  <!--     <v-icon small class="pr-2">mdi-phone</v-icon> -->
-                  <!--     Вызвать мастера -->
-                  <!--   </v-btn> -->
-                  <!-- </v-card-actions> -->
-                  <!-- <v-divider /> -->
                   <v-card-text>
                     Сервис
                     <strong>"Каталог"</strong> поможет подобрать аксессуары и
@@ -114,7 +95,7 @@
                       style="justify-content: flex-start"
                       block
                       nuxt
-                      to="/parts"
+                      to="/catalogue"
                       dark
                     >
                       <v-icon class="pr-2">mdi-cellphone-cog</v-icon>
