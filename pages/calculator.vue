@@ -15,6 +15,7 @@
                 :items="jobsList"
                 label="Марка устройства"
                 return-object
+                @change="job = false"
               />
               <v-select
                 v-if="trademark"
@@ -22,6 +23,7 @@
                 :items="trademark.children"
                 label="Модель устройства"
                 return-object
+                @change="job = false"
               />
               <v-select
                 v-if="model"
@@ -31,27 +33,56 @@
                 chips
                 clearable
                 multiple
-                menu-props="{style: 'white-space: none' }"
+                :menu-props="{ value: isOpen, closeOnClick: true }"
                 return-object
-                small-chips
+                @click.stop="isOpen = !isOpen"
               >
-                <template v-slot:selection="{ attrs, item, select, selected }">
+                <template v-slot:selection="{ attrs, item, selected }">
                   <v-chip
                     v-bind="attrs"
                     :input-value="selected"
                     color="secondary"
-                    small
-                    @click="select"
+                    x-small
                   >
-                    <strong>
-                      {{ item.text }}
-                    </strong>
+                    {{ item.text }}
                   </v-chip>
+                </template>
+                <template v-slot:prepend-item>
+                  <div class="px-3 pb-1 d-flex justify-end" color="secondary">
+                    <v-btn
+                      v-if="price"
+                      block
+                      small
+                      outlined
+                      color="secondary"
+                      @click.stop="isOpen = !isOpen"
+                    >
+                      OK
+                    </v-btn>
+                    <v-btn
+                      v-else
+                      color="error"
+                      small
+                      block
+                      outlined
+                      @click.stop="isOpen = !isOpen"
+                    >
+                      Закрыть меню</v-btn
+                    >
+                  </div>
+                </template>
+                <template v-slot:item="{ on, attrs, item }">
+                  <v-list-item v-bind="attrs" v-on="on">
+                    <v-list-item-content class="pb-4">
+                      {{ item.text }}
+                    </v-list-item-content>
+                  </v-list-item>
                 </template>
               </v-select>
               <v-card v-if="price" color="secondary" dark>
                 <v-card-title>
-                  <strong> {{ price }}&nbsp; </strong>
+                  <span class="caption">от&nbsp;</span>
+                  <strong>{{ price }}&nbsp; </strong>
                   <v-icon small>mdi-currency-rub</v-icon>
                   <sup>*</sup>
                   <span class="caption">
@@ -80,17 +111,21 @@ export default {
   data() {
     return {
       jobsList,
+      isOpen: false,
       trademark: false,
-      model: '',
-      job: ''
+      model: false,
+      job: false
     }
   },
   computed: {
     price() {
-      if (Array.isArray(this.job)) {
-        let sum = 0
-        this.job.forEach((job) => {
-          sum += job.price
+      const t = this.trademark
+      const m = this.model
+      const j = this.job
+      let sum = 0
+      if (t && m && Array.isArray(j) && j.length >= 1) {
+        j.forEach((item) => {
+          sum += item.price
         })
         return sum
       } else return false
