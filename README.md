@@ -1,8 +1,9 @@
-# evz
+# Веб-сайт компании Евросвязь, СПб, 2020
 
-> My great Nuxt.js project
+> Мой проект по разработке интерактивного веб-сайта для петербургской компании
+> "Евросвязь".
 
-## Build Setup
+## Установка и запуск проекта
 
 ```bash
 # install dependencies
@@ -18,5 +19,3 @@ $ npm run start
 # generate static project
 $ npm run generate
 ```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).

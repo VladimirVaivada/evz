@@ -20,20 +20,20 @@
 </template>
 
 <script>
-import accumulators from '~/assets/data/price_moba_23-04-20__accumulators.js'
-import accessories from '~/assets/data/price_moba_23-04-20__accessories.js'
-import displays from '~/assets/data/price_moba_23-04-20__displays.js'
-import parts from '~/assets/data/price_moba_23-04-20__parts.js'
-import memoryCards from '~/assets/data/price_moba_23-04-20__memory-cards.js'
-import cases from '~/assets/data/price_moba_23-04-20__cases.js'
-import caseParts from '~/assets/data/price_moba_23-04-20__case-parts.js'
-import glasses from '~/assets/data/price_moba_23-04-20__glasses.js'
-import matrixes from '~/assets/data/price_moba_23-04-20__matrixes.js'
-import touchscreens from '~/assets/data/price_moba_23-04-20__touchscreens.js'
-import microschemes from '~/assets/data/price_moba_23-04-20__microschemes.js'
-import shleifses from '~/assets/data/price_moba_23-04-20__shleifses.js'
-import tools from '~/assets/data/price_moba_23-04-20__tools.js'
-import tvSets from '~/assets/data/price_moba_23-04-20__tv-sets.js'
+import db01 from '~/assets/data/price__01.js'
+import db02 from '~/assets/data/price__02.js'
+import db03 from '~/assets/data/price__03.js'
+import db04 from '~/assets/data/price__04.js'
+import db05 from '~/assets/data/price__05.js'
+import db06 from '~/assets/data/price__06.js'
+import db07 from '~/assets/data/price__07.js'
+import db08 from '~/assets/data/price__08.js'
+import db09 from '~/assets/data/price__09.js'
+import db10 from '~/assets/data/price__10.js'
+import db11 from '~/assets/data/price__11.js'
+import db12 from '~/assets/data/price__12.js'
+import db13 from '~/assets/data/price__13.js'
+import db14 from '~/assets/data/price__14.js'
 
 import myExpansion from '~/components/my-expansion.vue'
 
@@ -44,20 +44,20 @@ export default {
   data() {
     return {
       db: [
-        accumulators,
-        accessories,
-        displays,
-        parts,
-        memoryCards,
-        cases,
-        caseParts,
-        glasses,
-        matrixes,
-        touchscreens,
-        microschemes,
-        shleifses,
-        tools,
-        tvSets
+        db01,
+        db02,
+        db03,
+        db04,
+        db05,
+        db06,
+        db07,
+        db08,
+        db09,
+        db10,
+        db11,
+        db12,
+        db13,
+        db14
       ],
       selection: []
     }
