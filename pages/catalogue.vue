@@ -32,8 +32,6 @@ import db09 from '~/assets/data/price_09.js'
 import db10 from '~/assets/data/price_10.js'
 import db11 from '~/assets/data/price_11.js'
 import db12 from '~/assets/data/price_12.js'
-import db13 from '~/assets/data/price_13.js'
-import db14 from '~/assets/data/price_14.js'
 
 import myExpansion from '~/components/my-expansion.vue'
 
@@ -56,8 +54,6 @@ export default {
         db10,
         db11,
         db12,
-        db13,
-        db14
       ],
       selection: []
     }
