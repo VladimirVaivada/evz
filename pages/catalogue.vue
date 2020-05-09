@@ -53,7 +53,7 @@ export default {
         db09,
         db10,
         db11,
-        db12,
+        db12
       ],
       selection: []
     }
