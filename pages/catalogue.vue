@@ -37,7 +37,7 @@ import myExpansion from '~/components/my-expansion.vue'
 
 export default {
   components: {
-    'my-expansion': myExpansion
+    myExpansion
   },
   data() {
     return {
