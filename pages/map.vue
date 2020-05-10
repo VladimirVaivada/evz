@@ -82,7 +82,7 @@ export default {
   },
   head() {
     return {
-      title: 'Мы на карте'
+      title: 'Карта'
     }
   }
 }

@@ -50,7 +50,10 @@ import listContacts from '~/components/list-contacts.vue'
 export default {
   components: {
     listContacts
-  }
+  },
+  head() {
+    return {
+      title: 'О нас'}} 
 }
 </script>
 

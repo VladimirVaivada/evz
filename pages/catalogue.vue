@@ -66,6 +66,9 @@ export default {
       })
       return x || 'Выберите товар...'
     }
-  }
+  },
+  head() {
+    return {
+      title: 'Каталог'}}
 }
 </script>

@@ -130,6 +130,10 @@ export default {
         return sum
       } else return false
     }
-  }
+  },
+  head() {
+    return {
+      title: 'Калькулятор'
+    }}
 }
 </script>
