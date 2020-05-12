@@ -15,7 +15,7 @@
                 <v-icon class="py-1" color="green">
                   {{ item.icon }}
                 </v-icon>
-                &nbsp;<span>{{ item.text }}</span>
+                &nbsp;<span v-html="item.text"></span>
               </div>
             </v-list-item-content>
           </v-list-item>
@@ -48,7 +48,10 @@ export default {
   data() {
     return {
       contacts: [
-        { icon: 'mdi-clock', text: 'с 11:00 до 20:00, ежедневно;' },
+        {
+          icon: 'mdi-clock',
+          text: 'с <time>11:00</time> до <time>20:00</time>, ежедневно;'
+        },
         {
           icon: 'mdi-home',
           text: 'ст.м.Пионерская, аллея Поликарпова, д.2;',

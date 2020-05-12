@@ -69,6 +69,8 @@ export default {
   },
   head() {
     return {
-      title: 'Каталог'}}
+      title: 'Каталог'
+    }
+  }
 }
 </script>

@@ -53,7 +53,9 @@ export default {
   },
   head() {
     return {
-      title: 'О нас'}} 
+      title: 'О нас'
+    }
+  }
 }
 </script>
 

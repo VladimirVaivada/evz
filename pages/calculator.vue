@@ -134,6 +134,7 @@ export default {
   head() {
     return {
       title: 'Калькулятор'
-    }}
+    }
+  }
 }
 </script>
