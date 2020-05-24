@@ -1,5 +1,5 @@
 # Веб-сайт компании Евросвязь, СПб, 2020
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/efb15f6d-eab6-4ce8-a732-288fefa39d62/deploy-status)](https://app.netlify.com/sites/evz/deploys)
 > Мой проект по разработке интерактивного веб-сайта для петербургской компании
 > "Евросвязь".
 
