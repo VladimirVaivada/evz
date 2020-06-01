@@ -21,6 +21,10 @@ export default {
         hid: 'description',
         name: 'description',
         content: process.env.npm_package_description || ''
+      },
+      {
+        name: "yandex-verification",
+        content: "436e7132aa84a034"
       }
     ],
     link: [
