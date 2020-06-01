@@ -76,7 +76,7 @@
           {{ title }}
         </nuxt-link>
         <nuxt-link to="/map" style="text-decoration:none">
-          <sub class="caption white--text">&nbsp;ст.м.Пионерская</sub>
+          <sub class="caption white--text">&nbsp;м.Пионерская</sub>
         </nuxt-link>
       </v-toolbar-title>
       <v-spacer />
