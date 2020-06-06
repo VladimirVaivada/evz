@@ -68,7 +68,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: [
+  modules: [],
 
   /*
    ** ESlint module configuration
