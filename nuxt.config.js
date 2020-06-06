@@ -69,35 +69,6 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
-    // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios',
-      '@nuxtjs/firebase',
-  ],
-
-  /*
-   ** Axios module configuration
-   ** See https://axios.nuxtjs.org/options
-   */
-  axios: {},
-
-  /*
-   ** Firebase module configuration
-   ** https://firebase.nuxtjs.org/guide/getting-started/#configure
-   */
-  firebase: {
-    config: {
-      apiKey: "AIzaSyBJ3qq7g0UhFe15iifgp1t4dHMEqEQ6jGE",
-      authDomain: "evz-site.firebaseapp.com",
-      databaseURL: "https://evz-site.firebaseio.com",
-      projectId: "evz-site",
-      storageBucket: "evz-site.appspot.com",
-      messagingSenderId: "187721311188",
-      appId: "1:187721311188:web:499705e4d16fbf221fac41"
-    },
-    services: {
-      firestore:true
-    }
-  },
 
   /*
    ** ESlint module configuration
