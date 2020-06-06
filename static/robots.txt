@@ -1,5 +1,6 @@
 User-agent: Yandex
 Host: https://www.evrosvyaz.com/
+Sitemap: https://www.evrosvyaz.com/sitemap.xml
 Disallow: /map
 Disallow: /about
 Disallow: /catalogue
