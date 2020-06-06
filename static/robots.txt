@@ -1,4 +1,11 @@
 User-agent: Yandex
 Host: https://www.evrosvyaz.com/
-Allow: /
 Disallow: /map
+Disallow: /about
+Disallow: /catalogue
+Disallow: /calculator
+Allow: /
+Allow: /map/
+Allow: /about/
+Allow: /catalogue/
+Allow: /calculator/
