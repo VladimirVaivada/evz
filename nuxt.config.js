@@ -9,7 +9,7 @@ export default {
     htmlAttrs: {
       lang: 'ru-RU'
     },
-    titleTemplate: `%s | Евросвязь`,
+    titleTemplate: `%s | Евросвязь - ремонт телефонов у метро Пионерская, ремонт планшетов и ноутбуков, чехлы, защитные плёнки и зарядные устройства в Санкт-Петербурге`,
     title: 'Веб-сайт',
     meta: [
       { charset: 'utf-8' },
@@ -21,6 +21,11 @@ export default {
         hid: 'description',
         name: 'description',
         content: process.env.npm_package_description || ''
+      },
+      {
+        hid: 'keywords',
+        name: 'keywords',
+        content: 'Санкт-Петербург, Пионерская, ремонт, телефон, телефоны, планшет, ноутбук, чехол, чехлы, зарядное, защитная, плёнка, наушники, починить, исправить, восстановить, спб'
       },
       {
         name: "yandex-verification",
