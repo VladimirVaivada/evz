@@ -154,7 +154,14 @@ export default {
   },
   head() {
     return {
-      title: 'Главная'
+      title: 'Главная',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: ''
+        }
+      ]
     }
   }
 }
