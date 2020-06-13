@@ -15,7 +15,7 @@ export default {
       { charset: 'utf-8' },
       {
         name: 'viewport',
-        content: 'initial-scale=1.0, user-scalable=no, maximum-scale=1.0'
+        content: 'initial-scale=1.0, maximum-scale=5.0'
       },
       {
         hid: 'description',
@@ -33,6 +33,7 @@ export default {
       }
     ],
     link: [
+      {rel:"preload", as:"font", type:"font/woff2", href:"fonts/Roboto-Regular-firstStage.woff2"},
       {rel:"apple-touch-icon", sizes:"180x180", href:"/apple-touch-icon.png"},
       {rel:"icon", type:"image/png", sizes:"32x32", href:"/favicon-32x32.png"},
       {rel:"icon", type:"image/png", sizes:"16x16", href:"/favicon-16x16.png"},
@@ -52,7 +53,9 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: [
+    '~/assets/fonts.css'
+  ],
 
   /*
    ** Plugins to load before mounting the App
@@ -96,6 +99,8 @@ export default {
         }
       }
     },
+    defaultAssets: false,
+    icons: {iconfont:'mdiSvg'}
   },
 
   /*

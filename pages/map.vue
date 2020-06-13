@@ -4,7 +4,7 @@
     style="flex-direction: column; align-items: end"
     class="py-6"
   >
-    <v-card id="js-ymap" class="map" color="orange">
+    <v-card id="js-ymap" class="map" color="primary darken-3">
       <p
         style="position:absolute; top: 1em; left: 1em;"
         class="headline white--text"
@@ -87,7 +87,8 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'Страница с картой расположения компании Евросвязь, Санкт-Петербург, м.Политехническая. Которая предлагает качественный и быстрый ремонт телефонов и другой цифровой техники. Высокий уровень сервиса и умеренные цены.'
+          content:
+            'Страница с картой расположения компании Евросвязь, Санкт-Петербург, м.Политехническая. Которая предлагает качественный и быстрый ремонт телефонов и другой цифровой техники. Высокий уровень сервиса и умеренные цены.'
         }
       ]
     }

@@ -8,7 +8,7 @@
           :to="item.to"
           nuxt
           exact
-          color="primary darken-2"
+          color="primary darken-3"
         >
           <v-list-item-action>
             <v-icon color="primary">{{ item.icon }}</v-icon>
@@ -44,7 +44,7 @@
           href="mailto:chained_@mail.ru?subject=%D0%92%D0%BE%D0%BF%D1%80%D0%BE%D1%81%20%D0%BD%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B5%3A%20%28%20%D0%A2%D0%B5%D0%BC%D0%B0%20%D0%92%D0%B0%D1%88%D0%B5%D0%B3%D0%BE%20%D0%BF%D0%B8%D1%81%D1%8C%D0%BC%D0%B0%20%29"
         >
           <v-list-item-action>
-            <v-icon color="red" class="py-1">mdi-email-send</v-icon>
+            <v-icon color="red" class="py-1">{{ mdiEmailSend }}</v-icon>
           </v-list-item-action>
           <v-list-item-content>
             Написать
@@ -57,7 +57,7 @@
           class="my-1"
         >
           <v-list-item-action>
-            <v-icon color="red">mdi-phone</v-icon>
+            <v-icon color="red">{{ mdiPhone }}</v-icon>
           </v-list-item-action>
           <v-list-item-content>
             Позвонить
@@ -66,7 +66,7 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-app-bar :clipped-right="clipped" color="primary darken-2" dark app>
+    <v-app-bar :clipped-right="clipped" color="primary darken-4" dark app>
       <v-toolbar-title class="pr-1">
         <nuxt-link
           to="/"
@@ -80,7 +80,10 @@
         </nuxt-link>
       </v-toolbar-title>
       <v-spacer />
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
+      <v-app-bar-nav-icon
+        aria-label="Навигация по сайту"
+        @click.stop="drawer = !drawer"
+      />
     </v-app-bar>
 
     <v-content class="blue-grey">
@@ -88,12 +91,13 @@
       <!--  -->
     </v-content>
 
-    <v-footer color="primary" elevation="16" dark app>
+    <v-footer color="primary darken-3" elevation="16" dark app absolute>
       <span>&copy; {{ new Date().getFullYear() }}</span>
       <v-spacer />
       <v-btn
         v-for="(item, n) in social"
         :key="n + item.link"
+        :aria-label="item.title"
         :href="item.link"
         icon
       >
@@ -104,46 +108,64 @@
 </template>
 
 <script>
+import {
+  mdiHome,
+  mdiMap,
+  mdiInformation,
+  mdiCellphoneCog,
+  mdiCalculator,
+  mdiVk,
+  mdiInstagram,
+  mdiEmailSend,
+  mdiPhone
+} from '@mdi/js'
 export default {
   name: 'Default',
   data() {
     return {
+      mdiEmailSend,
+      mdiPhone,
       clipped: true,
       drawer: null,
       pages: [
         {
-          icon: 'mdi-home',
+          icon: mdiHome,
           title: 'Главная страница',
           to: '/'
         },
         {
-          icon: 'mdi-map',
+          icon: mdiMap,
           title: 'Мы на карте',
           to: '/map'
         },
         {
-          icon: 'mdi-information',
+          icon: mdiInformation,
           title: 'О нас',
           to: '/about'
         }
       ],
       services: [
         {
-          icon: 'mdi-cellphone-cog',
+          icon: mdiCellphoneCog,
           title: 'Каталог',
           to: '/catalogue'
         },
         {
-          icon: 'mdi-calculator',
+          icon: mdiCalculator,
           title: 'Калькулятор',
           to: '/calculator'
         }
       ],
       social: [
-        { link: 'https://vk.com/eurosvaz', icon: 'mdi-vk' },
+        {
+          link: 'https://vk.com/eurosvaz',
+          icon: mdiVk,
+          title: 'Наша группа во ВКонтакте'
+        },
         {
           link: 'https://www.instagram.com/p/B-fYCVFIKRW/?igshid=escfq5u0yzog',
-          icon: 'mdi-instagram'
+          icon: mdiInstagram,
+          title: 'Наш аккаунт в Инстаграмм'
         }
       ],
       title: 'ЕВРОСВЯЗЬ'

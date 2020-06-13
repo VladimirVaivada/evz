@@ -5,7 +5,7 @@
         <v-row>
           <v-col cols="12">
             <v-card dark>
-              <v-toolbar color="primary" dense elevation="12">
+              <v-toolbar color="primary darken-3" dense elevation="12">
                 <v-toolbar-title class="title">
                   Текущие акции
                 </v-toolbar-title>
@@ -23,7 +23,7 @@
                   :src="slide.src"
                 >
                   <v-container fluid height="100%">
-                    <v-card color="rgba(50,50,60,0.3)" tile>
+                    <v-card color="rgba(50,50,60,0.7)" tile>
                       <v-card-title
                         class="text-uppercase"
                         style="word-break: keep-all"
@@ -38,7 +38,7 @@
           </v-col>
 
           <v-col>
-            <v-card color="primary" dark>
+            <v-card color="primary darken-3" dark>
               <v-card-title>
                 Приветствуем Вас!
               </v-card-title>
@@ -73,7 +73,7 @@
       <v-col lg="4" cols="12" order-lg="1" class="pt-lg-3 pt-0">
         <v-row>
           <v-col cols="12" class="pt-0">
-            <v-card color="primary" dark>
+            <v-card color="primary darken-3" dark>
               <v-card-title>Интерактивные сервисы</v-card-title>
               <v-card-subtitle>Всё для Вашего удобства</v-card-subtitle>
               <v-card-text>
@@ -159,7 +159,8 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'Главная страница компании Евросвязь, Санкт-Петербург, м.Политехническая. Мы предлагаем качественный и быстрый ремонт телефонов и другой цифровой техники. Высокий уровень сервиса и умеренные цены. На этой странице Вы найдёте всю необходимую информацию про наши акции, интерактивные сервисы, услуги по ремонту телефонов и другой техники, продажу аксессуаров для мобильных телефонов, услуги диагностики, наши контакты и месторасположение.'
+          content:
+            'Главная страница компании Евросвязь, Санкт-Петербург, м.Политехническая. Мы предлагаем качественный и быстрый ремонт телефонов и другой цифровой техники. Высокий уровень сервиса и умеренные цены. На этой странице Вы найдёте всю необходимую информацию про наши акции, интерактивные сервисы, услуги по ремонту телефонов и другой техники, продажу аксессуаров для мобильных телефонов, услуги диагностики, наши контакты и месторасположение.'
         }
       ]
     }

@@ -1,5 +1,5 @@
 <template>
-  <v-card color="primary" dark>
+  <v-card color="primary darken-3" dark>
     <v-card-title>Наши контакты</v-card-title>
     <v-card-subtitle>Звоните по любым вопросам!</v-card-subtitle>
     <v-card-text>
@@ -24,7 +24,7 @@
           >
             <v-list-item-content>
               <div>
-                <v-icon color="red" class="py-1">mdi-email-send</v-icon>
+                <v-icon color="red" class="py-1">{{ mdiEmailSend }}</v-icon>
                 Написать: Chained_@mail.ru
               </div>
             </v-list-item-content>
@@ -32,7 +32,7 @@
           <v-list-item href="tel:+79119644740">
             <v-list-item-content>
               <div>
-                <v-icon color="red" class="py-1">mdi-phone</v-icon>
+                <v-icon color="red" class="py-1">{{ mdiPhone }}</v-icon>
                 Позвонить: +7(911) 964-47-40
               </div>
             </v-list-item-content>
@@ -44,16 +44,19 @@
 </template>
 
 <script>
+import { mdiEmailSend, mdiPhone, mdiClock, mdiMap } from '@mdi/js'
 export default {
   data() {
     return {
+      mdiEmailSend,
+      mdiPhone,
       contacts: [
         {
-          icon: 'mdi-clock',
+          icon: mdiClock,
           text: 'с <time>11:00</time> до <time>20:00</time>, ежедневно;'
         },
         {
-          icon: 'mdi-home',
+          icon: mdiMap,
           text: 'м.Пионерская, аллея Поликарпова, д.2;',
           link: '/map'
         }
