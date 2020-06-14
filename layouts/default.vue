@@ -163,7 +163,7 @@ export default {
           title: 'Наша группа во ВКонтакте'
         },
         {
-          link: 'https://www.instagram.com/p/B-fYCVFIKRW/?igshid=escfq5u0yzog',
+          link: 'https://www.instagram.com/evrosvyaz_spb/',
           icon: mdiInstagram,
           title: 'Наш аккаунт в Инстаграмм'
         }

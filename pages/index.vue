@@ -143,7 +143,7 @@ export default {
       showArrows: false,
       slides: [
         {
-          src: '/hero.optim.webp',
+          src: '/hero.optim.jpg',
           caption:
             'До 31 августа при любом ремонте - Защитное стекло в подарок (с установкой)'
         }
