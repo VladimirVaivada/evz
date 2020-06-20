@@ -83,7 +83,7 @@
                 <v-card-title>
                   <span class="caption">от&nbsp;</span>
                   <strong>{{ price }}&nbsp; </strong>
-                  <v-icon small>mdi-currency-rub</v-icon>
+                  <v-icon small>{{ mdiCurrencyRub }}</v-icon>
                   <sup>*</sup>
                   <span class="caption">
                     &nbsp;+&nbsp;запчасти
@@ -104,12 +104,14 @@
 </template>
 
 <script>
-import jobsList from '~/assets/data/jobs.js'
+import { mdiCurrencyRub } from '@mdi/js'
+import jobsList from '@/assets/data/jobs.js'
 
 export default {
   name: 'MyCalculator',
   data() {
     return {
+      mdiCurrencyRub,
       jobsList,
       isOpen: false,
       trademark: false,

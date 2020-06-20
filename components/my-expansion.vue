@@ -9,7 +9,8 @@
         <div class="pa-4">
           <div class="title">
             {{ item.price * 1.2 }}&nbsp;
-            <v-icon small dark>mdi-currency-rub</v-icon><sup>*</sup>
+            <v-icon small dark>{{ mdiCurrencyRub }}</v-icon
+            ><sup>*</sup>
           </div>
           <div class="caption">
             <sup>*</sup>&nbsp;Приблизительная стоимость. <br />&nbsp;&nbsp;Не
@@ -22,6 +23,7 @@
 </template>
 
 <script>
+import { mdiCurrencyRub } from '@mdi/js'
 export default {
   name: 'MyExpansion',
   components: {
@@ -34,7 +36,9 @@ export default {
     }
   },
   data() {
-    return {}
+    return {
+      mdiCurrencyRub
+    }
   }
 }
 </script>
