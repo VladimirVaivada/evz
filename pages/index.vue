@@ -63,6 +63,19 @@
                       на Ваши вопросы по телефону либо электронным письмом.
                     </p>
                   </v-card-text>
+                  <v-card-actions>
+                    <v-btn
+                      color="secondary"
+                      style="justify-content: flex-start"
+                      block
+                      nuxt
+                      to="/about"
+                      dark
+                    >
+                      <v-icon class="pr-2">{{ mdiInformation }}</v-icon>
+                      Подробнее о нас...
+                    </v-btn>
+                  </v-card-actions>
                 </v-card>
               </v-card-text>
             </v-card>
@@ -98,7 +111,7 @@
                       to="/catalogue"
                       dark
                     >
-                      <v-icon class="pr-2">mdi-cellphone-cog</v-icon>
+                      <v-icon class="pr-2">{{ mdiCellphoneCog }}</v-icon>
                       Каталог
                     </v-btn>
                   </v-card-actions>
@@ -116,7 +129,7 @@
                       to="/calculator"
                       dark
                     >
-                      <v-icon class="pr-2">mdi-calculator</v-icon>
+                      <v-icon class="pr-2">{{ mdiCalculator }}</v-icon>
                       Калькулятор
                     </v-btn>
                   </v-card-actions>
@@ -134,12 +147,15 @@
 </template>
 
 <script>
+import { mdiInformation, mdiCellphoneCog, mdiCalculator } from '@mdi/js'
 import listContacts from '~/components/list-contacts.vue'
-
 export default {
   components: { listContacts },
   data() {
     return {
+      mdiInformation,
+      mdiCellphoneCog,
+      mdiCalculator,
       showArrows: false,
       slides: [
         {
