@@ -29,6 +29,8 @@
     "fibers": "^5.0.0",
     "node-sass": "^4.14.1",
     "prettier": "^1.19.1",
+    "pug": "^3.0.0",
+    "pug-plain-loader": "^1.0.0",
     "stylelint": "^10.1.0",
     "typescript": "^3.8.3"
   }
