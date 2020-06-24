@@ -112,6 +112,7 @@ import {
   mdiHome,
   mdiMap,
   mdiInformation,
+  mdiTools,
   mdiCellphoneCog,
   mdiCalculator,
   mdiVk,
@@ -142,6 +143,11 @@ export default {
           icon: mdiInformation,
           title: 'О нас',
           to: '/about'
+        },
+        {
+          icon: mdiTools,
+          title: 'Ремонт',
+          to: '/repair'
         }
       ],
       services: [
