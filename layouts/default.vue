@@ -1,26 +1,21 @@
-<template>
-  <v-app>
-    <v-navigation-drawer v-model="drawer" :clipped="clipped" light right app>
-      <v-list nav tile>
-        <v-list-item
+<template lang="pug">
+  v-app
+    v-navigation-drawer(v-model="drawer" temporary light right app)
+      v-list(nav tile)
+        v-list-item(
           v-for="item in pages"
           :key="item.title"
           :to="item.to"
           nuxt
           exact
           color="primary darken-3"
-        >
-          <v-list-item-action>
-            <v-icon color="primary">{{ item.icon }}</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title v-text="item.title" />
-          </v-list-item-content>
-        </v-list-item>
-
-        <v-divider />
-
-        <v-list-item
+        )
+          v-list-item-action
+            v-icon(color="primary") {{ item.icon }}
+          v-list-item-content
+            v-list-item-title(v-text="item.title")
+        v-divider
+        v-list-item(
           v-for="(item, i) in services"
           :key="i"
           :to="item.to"
@@ -28,83 +23,61 @@
           exact
           color="secondary"
           class="my-1"
-        >
-          <v-list-item-action>
-            <v-icon color="secondary">{{ item.icon }}</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title v-text="item.title" />
-          </v-list-item-content>
-        </v-list-item>
-        <v-divider />
-        <v-list-item
+        )
+          v-list-item-action
+            v-icon(color="secondary") {{ item.icon }}
+          v-list-item-content
+            v-list-item-title(v-text="item.title")
+        v-divider
+        v-list-item(
           class="my-1"
           target="_blank"
           rel="noreferrer noopener"
-          href="mailto:chained_@mail.ru?subject=%D0%92%D0%BE%D0%BF%D1%80%D0%BE%D1%81%20%D0%BD%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B5%3A%20%28%20%D0%A2%D0%B5%D0%BC%D0%B0%20%D0%92%D0%B0%D1%88%D0%B5%D0%B3%D0%BE%20%D0%BF%D0%B8%D1%81%D1%8C%D0%BC%D0%B0%20%29"
-        >
-          <v-list-item-action>
-            <v-icon color="red" class="py-1">{{ mdiEmailSend }}</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            Написать
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item
+          href="mailto:chained_@mail.ru?subject=evrosvyaz.com:%20"
+        )
+          v-list-item-action
+            v-icon(color="red" class="py-1") {{ mdiEmailSend }}
+          v-list-item-content Написать
+        v-list-item(
           target="_blank"
           rel="noreferrer noopener"
           href="tel:+79119644740"
           class="my-1"
-        >
-          <v-list-item-action>
-            <v-icon color="red">{{ mdiPhone }}</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            Позвонить
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
+        )
+          v-list-item-action
+            v-icon(color="red") {{ mdiPhone }}
+          v-list-item-content Позвонить
 
-    <v-app-bar :clipped-right="clipped" color="primary darken-4" dark app>
-      <v-toolbar-title class="pr-1">
-        <nuxt-link
-          to="/"
-          class="headline white--text"
-          style="text-decoration:none"
-        >
-          {{ title }}
-        </nuxt-link>
-        <nuxt-link to="/map" style="text-decoration:none">
-          <sub class="caption white--text">&nbsp;м.Пионерская</sub>
-        </nuxt-link>
-      </v-toolbar-title>
-      <v-spacer />
-      <v-app-bar-nav-icon
-        aria-label="Навигация по сайту"
-        @click.stop="drawer = !drawer"
-      />
-    </v-app-bar>
+    v-app-bar(
+      :clipped-right="clipped"
+      color="primary darken-4"
+      dark
+      app
+    )
+      v-toolbar-title(class="pr-1")
+        nuxt-link(to="/" class="headline white--text" style="text-decoration:none")
+          | {{ title }}
+        nuxt-link(to="/map" style="text-decoration:none")
+          sub(class="caption white--text") &nbsp;м.Пионерская
+      v-spacer
+      v-app-bar-nav-icon(aria-label="Навигация по сайту" @click.stop="drawer = !drawer")
 
-    <v-content class="blue-grey">
-      <nuxt keep-alive :keep-alive-props="{ max: 2 }" />
-      <!--  -->
-    </v-content>
+    // *****
+    v-content(class="blue-grey")
+      nuxt(keep-alive :keep-alive-props={ max: 2 })
+    // *****
 
-    <v-footer color="primary darken-3" elevation="16" dark app absolute>
-      <span>&copy; {{ new Date().getFullYear() }}</span>
-      <v-spacer />
-      <v-btn
+    v-footer(color="primary darken-3" elevation="16" dark app absolute)
+      span &copy; {{ new Date().getFullYear() }}
+      v-spacer
+      v-btn(
         v-for="(item, n) in social"
         :key="n + item.link"
         :aria-label="item.title"
         :href="item.link"
         icon
-      >
-        <v-icon size="24px">{{ item.icon }}</v-icon>
-      </v-btn>
-    </v-footer>
-  </v-app>
+      )
+        v-icon(size="24px") {{ item.icon }}
 </template>
 
 <script>
@@ -120,14 +93,20 @@ import {
   mdiEmailSend,
   mdiPhone
 } from '@mdi/js'
+
 export default {
   name: 'Default',
+
   data() {
     return {
       mdiEmailSend,
+
       mdiPhone,
-      clipped: true,
+
+      clipped: false,
+
       drawer: null,
+
       pages: [
         {
           icon: mdiHome,
@@ -150,6 +129,7 @@ export default {
           to: '/repair'
         }
       ],
+
       services: [
         {
           icon: mdiCellphoneCog,
@@ -162,6 +142,7 @@ export default {
           to: '/calculator'
         }
       ],
+
       social: [
         {
           link: 'https://vk.com/eurosvaz',
@@ -174,6 +155,7 @@ export default {
           title: 'Наш аккаунт в Инстаграмм'
         }
       ],
+
       title: 'ЕВРОСВЯЗЬ'
     }
   }
