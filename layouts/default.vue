@@ -115,7 +115,7 @@ export default {
 
   data() {
     return {
-      hidden: false,
+      hidden: true,
 
       mdiChevronUp,
 
@@ -186,8 +186,8 @@ export default {
     },
 
     onScroll(e) {
-      console.log(document.documentElement.scrollTop)
-      if (document.documentElement.scrollTop > 200) this.hidden = false
+      const feature = document.documentElement.scrollTop
+      if (feature && feature > 200) this.hidden = false
       else this.hidden = true
     }
   }
