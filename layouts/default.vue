@@ -1,5 +1,5 @@
 <template lang="pug">
-  v-app
+  v-app(style="position:relative;")
     v-navigation-drawer(v-model="drawer" temporary light right app)
       v-list(nav tile)
         v-list-item(
@@ -63,9 +63,24 @@
       v-app-bar-nav-icon(aria-label="Навигация по сайту" @click.stop="drawer = !drawer")
 
     // *****
-    v-content(class="blue-grey")
+    v-content(class="blue-grey" v-scroll="onScroll")
       nuxt(keep-alive :keep-alive-props={ max: 2 })
     // *****
+
+    v-fab-transition
+      v-btn(
+        fab
+        big
+        color="secondary lighten-1"
+        bottom
+        right
+        fixed
+        dark
+        style="bottom:80px;"
+        v-show="!hidden"
+        @click="onFAB"
+      )
+        v-icon {{ mdiChevronUp }}
 
     v-footer(color="primary darken-3" elevation="16" dark app absolute)
       span &copy; {{ new Date().getFullYear() }}
@@ -91,7 +106,8 @@ import {
   mdiVk,
   mdiInstagram,
   mdiEmailSend,
-  mdiPhone
+  mdiPhone,
+  mdiChevronUp
 } from '@mdi/js'
 
 export default {
@@ -99,6 +115,10 @@ export default {
 
   data() {
     return {
+      hidden: false,
+
+      mdiChevronUp,
+
       mdiEmailSend,
 
       mdiPhone,
@@ -157,6 +177,18 @@ export default {
       ],
 
       title: 'ЕВРОСВЯЗЬ'
+    }
+  },
+
+  methods: {
+    onFAB() {
+      this.$vuetify.goTo(0)
+    },
+
+    onScroll(e) {
+      console.log(document.documentElement.scrollTop)
+      if (document.documentElement.scrollTop > 200) this.hidden = false
+      else this.hidden = true
     }
   }
 }
