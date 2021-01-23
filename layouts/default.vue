@@ -1,98 +1,71 @@
 <template lang="pug">
-  v-app(style="position:relative;")
-    v-navigation-drawer(v-model="drawer" temporary light right app)
-      v-list(nav tile)
-        v-list-item(
-          v-for="item in pages"
-          :key="item.title"
-          :to="item.to"
-          nuxt
-          exact
-          color="primary darken-3"
-        )
-          v-list-item-action
-            v-icon(color="primary") {{ item.icon }}
-          v-list-item-content
-            v-list-item-title(v-text="item.title")
-        v-divider
-        v-list-item(
-          v-for="(item, i) in services"
-          :key="i"
-          :to="item.to"
-          nuxt
-          exact
-          color="secondary"
-          class="my-1"
-        )
-          v-list-item-action
-            v-icon(color="secondary") {{ item.icon }}
-          v-list-item-content
-            v-list-item-title(v-text="item.title")
-        v-divider
-        v-list-item(
-          class="my-1"
-          target="_blank"
-          rel="noreferrer noopener"
-          href="mailto:chained_@mail.ru?subject=evrosvyaz.com:%20"
-        )
-          v-list-item-action
-            v-icon(color="red" class="py-1") {{ mdiEmailSend }}
-          v-list-item-content Написать
-        v-list-item(
-          target="_blank"
-          rel="noreferrer noopener"
-          href="tel:+79119644740"
-          class="my-1"
-        )
-          v-list-item-action
-            v-icon(color="red") {{ mdiPhone }}
-          v-list-item-content Позвонить
+v-app(style="position:relative;")
+	v-navigation-drawer(v-model="drawer" temporary light right app)
+		v-list(nav tile)
+			v-list-item(
+				v-for="item in pages"
+				:key="item.title"
+				:to="item.to"
+				nuxt
+				exact
+				color="primary darken-3"
+			)
+				v-list-item-action
+					v-icon(color="primary") {{ item.icon }}
+				v-list-item-content
+					v-list-item-title(v-text="item.title")
+			v-divider
+			v-list-item(
+				v-for="(item, i) in services"
+				:key="i"
+				:to="item.to"
+				nuxt
+				exact
+				color="secondary"
+				class="my-1"
+			)
+				v-list-item-action
+					v-icon(color="secondary") {{ item.icon }}
+				v-list-item-content
+					v-list-item-title(v-text="item.title")
+			v-divider
+			v-list-item(
+				target="_blank"
+				rel="noreferrer noopener"
+				href="tel:+79523873723"
+				class="my-1"
+			)
+				v-list-item-action
+					v-icon(color="red") {{ mdiPhone }}
+				v-list-item-content Позвонить
 
-    v-app-bar(
-      :clipped-right="clipped"
-      color="primary darken-4"
-      dark
-      app
-    )
-      v-toolbar-title(class="pr-1")
-        nuxt-link(to="/" class="headline white--text" style="text-decoration:none")
-          | {{ title }}
-        nuxt-link(to="/map" style="text-decoration:none")
-          sub(class="caption white--text") &nbsp;м.Пионерская
-      v-spacer
-      v-app-bar-nav-icon(aria-label="Навигация по сайту" @click.stop="drawer = !drawer")
+	v-app-bar(:clipped-right="clipped" color="primary darken-4" dark app)
+		v-toolbar-title(class="pr-1")
+			nuxt-link(to="/" class="headline white--text" style="text-decoration:none")
+				| {{ title }}
+		nuxt-link(to="/map" style="text-decoration:none")
+			sub(class="caption white--text") &nbsp;м.Пионерская
+		v-spacer
+		v-app-bar-nav-icon(aria-label="Навигация по сайту" @click.stop="drawer = !drawer")
 
-    // *****
-    v-content(class="blue-grey" v-scroll="onScroll")
-      nuxt(keep-alive :keep-alive-props={ max: 2 })
-    // *****
+			// *****
+	v-content(class="blue-grey lighten-5")
+		nuxt(keep-alive :keep-alive-props={ max: 2 })
+			// *****
 
-    v-fab-transition
-      v-btn(
-        fab
-        big
-        color="secondary lighten-1"
-        bottom
-        right
-        fixed
-        dark
-        style="bottom:80px;"
-        v-show="!hidden"
-        @click="onFAB"
-      )
-        v-icon {{ mdiChevronUp }}
-
-    v-footer(color="primary darken-3" elevation="16" dark app absolute)
-      span &copy; {{ new Date().getFullYear() }}
-      v-spacer
-      v-btn(
-        v-for="(item, n) in social"
-        :key="n + item.link"
-        :aria-label="item.title"
-        :href="item.link"
-        icon
-      )
-        v-icon(size="24px") {{ item.icon }}
+	v-footer(color="primary darken-4" elevation="16" dark app fixed)
+		v-btn(
+			v-for="(item, n) in social"
+			:key="n + item.link"
+			:aria-label="item.title"
+			:href="item.link"
+			icon
+		)
+			v-icon(size="24px") {{ item.icon }}
+		v-spacer
+		v-btn(aria-label="Позвонить в компанию Евросвязь" href="tel:+79523873723" outlined)
+			| Позвонить&nbsp;&nbsp;
+			v-icon(size="24px" color="secondary") {{mdiPhone}}
 </template>
 
 <script>
@@ -105,9 +78,7 @@ import {
   mdiCalculator,
   mdiVk,
   mdiInstagram,
-  mdiEmailSend,
-  mdiPhone,
-  mdiChevronUp
+  mdiPhone
 } from '@mdi/js'
 
 export default {
@@ -116,10 +87,6 @@ export default {
   data() {
     return {
       hidden: true,
-
-      mdiChevronUp,
-
-      mdiEmailSend,
 
       mdiPhone,
 
@@ -177,18 +144,6 @@ export default {
       ],
 
       title: 'ЕВРОСВЯЗЬ'
-    }
-  },
-
-  methods: {
-    onFAB() {
-      this.$vuetify.goTo(0)
-    },
-
-    onScroll(e) {
-      const feature = document.documentElement.scrollTop
-      if (feature && feature > 200) this.hidden = false
-      else this.hidden = true
     }
   }
 }

@@ -10,8 +10,6 @@
           v-breadcrumbs(:items="breadcrumbs")
 
           v-card-text
-            v-card-title О ремонте цифровой техники в нашей компании
-
             p В этом разделе мы постарались собрать для Вас полезную информацию по вопросам ремонта мобильных телефонов, планшетов, ноутбуков и иной цифровой техники.
 
             p Ищите ремонт поблизости от Вас, нужен ремонт айфона или другого устройства на Пионерской? Вашему смартфону пора бы заменить стекло или защитный экран? Хотите чтобы ваш планшет снова работал, даже после того, как Вы случайно уронили его в ванной?
@@ -37,23 +35,23 @@
 
             ul
               li: nuxt-link(to="/repair/apple") Apple
-              li: nuxt-lina(to="/repair/acer") Acer
-              li: nuxt-lina(to="/repair/asus") Asus
-              li: nuxt-lina(to="/repair/alcatel") Alcatal
-              li: nuxt-lina(to="/repair/htc") HTC
-              li: nuxt-lina(to="/repair/huawei") Huawei
-              li: nuxt-lina(to="/repair/lenovo") Lenovo
-              li: nuxt-lina(to="/repair/lg") LG
-              li: nuxt-lina(to="/repair/meizu") Meizu
-              li: nuxt-lina(to="/repair/microsoft") Microsoft
-              li: nuxt-lina(to="/repair/motorola") Motorola
-              li: nuxt-lina(to="/repair/nokia") Nokia
-              li: nuxt-lina(to="/repair/oppo") Oppo
-              li: nuxt-lina(to="/repair/prestigio") Prestigio
-              li: nuxt-lina(to="/repair/samsung") Samsung
-              li: nuxt-lina(to="/repair/sony") Sony
-              li: nuxt-lina(to="/repair/xiaomi") Xiaomi
-              li: nuxt-lina(to="/repair/zte") ZTE
+              li: nuxt-link(to="/repair/acer") Acer
+              li: nuxt-link(to="/repair/asus") Asus
+              li: nuxt-link(to="/repair/alcatel") Alcatal
+              li: nuxt-link(to="/repair/htc") HTC
+              li: nuxt-link(to="/repair/huawei") Huawei
+              li: nuxt-link(to="/repair/lenovo") Lenovo
+              li: nuxt-link(to="/repair/lg") LG
+              li: nuxt-link(to="/repair/meizu") Meizu
+              li: nuxt-link(to="/repair/microsoft") Microsoft
+              li: nuxt-link(to="/repair/motorola") Motorola
+              li: nuxt-link(to="/repair/nokia") Nokia
+              li: nuxt-link(to="/repair/oppo") Oppo
+              li: nuxt-link(to="/repair/prestigio") Prestigio
+              li: nuxt-link(to="/repair/samsung") Samsung
+              li: nuxt-link(to="/repair/sony") Sony
+              li: nuxt-link(to="/repair/xiaomi") Xiaomi
+              li: nuxt-link(to="/repair/zte") ZTE
               li и многие другие...
 
             p В данном списке, конечно же, перечислены далеко не все марки смартфонов. Мы берёмся за ремонт телефона, планшета или ноутбука практически любой из известных миру марок и любой модели.

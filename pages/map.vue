@@ -42,14 +42,14 @@ export default {
 
       function initializeYandexMap(ymaps) {
         myMap = new ymaps.Map('js-ymap', {
-          center: [60.0055664124, 30.296174999794],
-          zoom: 17
-        })
-        myPlacemark = new ymaps.Placemark(
-          myMap.getCenter(),
+          center: [60.0045, 30.2965],
+          zoom: 16
+        });
+        myPlacemark1 = new ymaps.Placemark(
+          [60.0055664124, 30.296174999794],
           {
-          hintContent: 'Евросвязь',
-          balloonContent: '"Евросвязь" - скупка, ремонт и продажа',
+			hintContent: 'Евросвязь',
+			balloonContent: '"Евросвязь" - скупка, ремонт и продажа',
           },
           {
             iconLayout: 'default#image',
@@ -58,7 +58,20 @@ export default {
             iconImageOffset: [-20, -66]
           }
         );
-        myMap.geoObjects.add(myPlacemark);
+        myPlacemark2 = new ymaps.Placemark(
+          [60.003556, 30.296627],
+          {
+			hintContent: 'Евросвязь',
+			balloonContent: '"Евросвязь" - скупка, ремонт и продажа',
+          },
+          {
+            iconLayout: 'default#image',
+            iconImageHref: 'placemark.png',
+            iconImageSize: [80, 66],
+            iconImageOffset: [-20, -66]
+          }
+        );
+        myMap.geoObjects.add(myPlacemark1).add(myPlacemark2);
       }`
       document.body.appendChild(scriptTag)
     },

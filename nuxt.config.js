@@ -93,9 +93,9 @@ export default {
       dark: false,
       themes: {
         light: {
-          primary: colors.orange,
-          secondary: colors.blue.darken3,
-          anchor: colors.blue.darken2
+          primary: colors.blue,
+          secondary: colors.green.lighten1,
+          anchor: colors.green
         }
       }
     },

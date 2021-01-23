@@ -5,7 +5,7 @@
         <v-row>
           <v-col cols="12">
             <v-card dark>
-              <v-toolbar color="primary darken-3" dense elevation="12">
+              <v-toolbar color="primary darken-3" dense elevation="16">
                 <v-toolbar-title class="title">
                   Текущие акции
                 </v-toolbar-title>
@@ -59,11 +59,14 @@
                       качество работ и лучшие цены.
                     </p>
                     <p>
-                      Ждём Вас в нашем салоне по адресу
+                      Ждём Вас в наших салонах по адресу
                       <strong
-                        >СПб, аллея Поликарпова, д.2 у метро Пионерская</strong
-                      >, а также будем счастливы ответить на Ваши вопросы по
-                      телефону либо электронным письмом.
+                        >СПб, проспект Испытателей, д.9 у метро
+                        "Пионерская"</strong
+                      >
+                      и <strong>аллея Поликарпова, д.2</strong>, а также будем
+                      счастливы ответить на Ваши вопросы по телефону либо
+                      электронным письмом.
                     </p>
                   </v-card-text>
                   <v-card-actions>
@@ -73,7 +76,7 @@
                       block
                       nuxt
                       to="/about"
-                      dark
+                      class="font-weight-black"
                     >
                       <v-icon class="pr-2">{{ mdiInformation }}</v-icon>
                       Подробнее о нас...
@@ -113,6 +116,7 @@
                       nuxt
                       to="/catalogue"
                       dark
+                      class="font-weight-black"
                     >
                       <v-icon class="pr-2">{{ mdiCellphoneCog }}</v-icon>
                       Каталог
@@ -131,6 +135,7 @@
                       nuxt
                       to="/calculator"
                       dark
+                      class="font-weight-black"
                     >
                       <v-icon class="pr-2">{{ mdiCalculator }}</v-icon>
                       Калькулятор
@@ -162,9 +167,9 @@ export default {
       showArrows: false,
       slides: [
         {
-          src: '/hero.optim.jpg',
+          src: '/hero.svg',
           caption:
-            'До 30 сентября при любом ремонте - Защитное стекло в подарок (с установкой)'
+            'До 28 февраля при любом ремонте - Защитное стекло в подарок!'
         }
         //        { src: '/hero.optim.jpg', caption: 'Слайд 2' },
         //        { src: '/hero.optim.jpg', caption: 'Слайд 3' }
