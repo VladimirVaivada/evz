@@ -167,7 +167,7 @@ export default {
       showArrows: false,
       slides: [
         {
-          src: '/hero.svg',
+          src: '/hero-optimized.svg',
           caption:
             'До 28 февраля при любом ремонте - Защитное стекло в подарок!'
         }

@@ -53,9 +53,9 @@ export default {
           },
           {
             iconLayout: 'default#image',
-            iconImageHref: 'placemark.png',
-            iconImageSize: [80, 66],
-            iconImageOffset: [-20, -66]
+            iconImageHref: 'placemark.svg',
+            iconImageSize: [80, 65],
+            iconImageOffset: [-42, -65]
           }
         );
         myPlacemark2 = new ymaps.Placemark(
@@ -66,9 +66,9 @@ export default {
           },
           {
             iconLayout: 'default#image',
-            iconImageHref: 'placemark.png',
-            iconImageSize: [80, 66],
-            iconImageOffset: [-20, -66]
+            iconImageHref: 'placemark.svg',
+            iconImageSize: [80, 65],
+            iconImageOffset: [-42, -65]
           }
         );
         myMap.geoObjects.add(myPlacemark1).add(myPlacemark2);

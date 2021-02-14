@@ -40,11 +40,9 @@ v-app(style="position:relative;")
 				v-list-item-content Позвонить
 
 	v-app-bar(:clipped-right="clipped" color="primary darken-4" dark app)
-		v-toolbar-title(class="pr-1")
-			nuxt-link(to="/" class="headline white--text" style="text-decoration:none")
-				| {{ title }}
-		nuxt-link(to="/map" style="text-decoration:none")
-			sub(class="caption white--text") &nbsp;м.Пионерская
+		nuxt-link(to="/" aria-label="На главную страницу" style="text-decoration:none")
+			v-img(src="/logo-with-text-optimized.svg" alt="Логотип в виде заряжающейся батарейки")
+		// TODO: Сделать логотип на первой странице просто картинкой, без ссылки
 		v-spacer
 		v-app-bar-nav-icon(aria-label="Навигация по сайту" @click.stop="drawer = !drawer")
 
