@@ -1,8 +1,7 @@
 <template>
   <v-container>
-    <v-row align="start">
-      <v-col lg="8" order-lg="2" class="pt-0">
-        <v-row>
+    <v-row class="flex-column">
+      <!--
           <v-col cols="12">
             <v-card dark>
               <v-toolbar color="primary darken-3" dense elevation="16">
@@ -36,119 +35,114 @@
               </v-carousel>
             </v-card>
           </v-col>
+          -->
 
-          <v-col>
-            <v-card color="primary darken-3" dark>
-              <v-card-title>
-                Приветствуем Вас!
-              </v-card-title>
-              <v-card-subtitle>
-                Вы на главной странице
-              </v-card-subtitle>
+      <v-col xl="8" offset-xl="2">
+        <v-card color="primary darken-3" dark>
+          <v-card-title>
+            Приветствуем Вас!
+          </v-card-title>
+          <v-card-subtitle>
+            Вы на главной странице
+          </v-card-subtitle>
+          <v-card-text>
+            <v-card light>
               <v-card-text>
-                <v-card light>
-                  <v-card-text>
-                    <p>
-                      Наша компания рада предложить Вам услуги по скупке,
-                      ремонту и продаже планшетов, мобильных телефонов и прочей
-                      цифровой техники.
-                    </p>
-                    <p>
-                      Мы дорожим своей репутацией и всегда стремимся предложить
-                      свойм клиетам самый высокий уровень сервиса, отличное
-                      качество работ и лучшие цены.
-                    </p>
-                    <p>
-                      Ждём Вас в наших салонах по адресу
-                      <strong
-                        >СПб, проспект Испытателей, д.9 у метро
-                        "Пионерская"</strong
-                      >
-                      и <strong>аллея Поликарпова, д.2</strong>, а также будем
-                      счастливы ответить на Ваши вопросы по телефону либо
-                      электронным письмом.
-                    </p>
-                  </v-card-text>
-                  <v-card-actions>
-                    <v-btn
-                      color="secondary"
-                      style="justify-content: flex-start"
-                      block
-                      nuxt
-                      to="/about"
-                      class="font-weight-black"
-                    >
-                      <v-icon class="pr-2">{{ mdiInformation }}</v-icon>
-                      Подробнее о нас...
-                    </v-btn>
-                  </v-card-actions>
-                </v-card>
+                <p>
+                  Наша компания рада предложить Вам услуги по скупке, ремонту и
+                  продаже планшетов, мобильных телефонов и прочей цифровой
+                  техники.
+                </p>
+                <p>
+                  Мы дорожим своей репутацией и всегда стремимся предложить
+                  свойм клиетам самый высокий уровень сервиса, отличное качество
+                  работ и лучшие цены.
+                </p>
+                <p>
+                  Ждём Вас в наших салонах по адресу
+                  <strong
+                    >СПб, проспект Испытателей, д.9 у метро "Пионерская"</strong
+                  >
+                  и <strong>аллея Поликарпова, д.2</strong>, а также будем
+                  счастливы ответить на Ваши вопросы по телефону либо
+                  электронным письмом.
+                </p>
               </v-card-text>
+              <v-card-actions>
+                <v-btn
+                  color="secondary"
+                  style="justify-content: flex-start"
+                  block
+                  nuxt
+                  to="/about"
+                  class="font-weight-black"
+                >
+                  <v-icon class="pr-2">{{ mdiInformation }}</v-icon>
+                  Подробнее о нас...
+                </v-btn>
+              </v-card-actions>
             </v-card>
-          </v-col>
-        </v-row>
+          </v-card-text>
+        </v-card>
       </v-col>
 
-      <v-col lg="4" cols="12" order-lg="1" class="pt-lg-3 pt-0">
-        <v-row>
-          <v-col cols="12" class="pt-0">
-            <v-card color="primary darken-3" dark>
-              <v-card-title>Интерактивные сервисы</v-card-title>
-              <v-card-subtitle>Всё для Вашего удобства</v-card-subtitle>
+      <v-col xl="8" offset-xl="2" class="pt-0">
+        <v-card color="primary darken-3" dark>
+          <v-card-title>Интерактивные сервисы</v-card-title>
+          <v-card-subtitle>Всё для Вашего удобства</v-card-subtitle>
+          <v-card-text>
+            <v-card light>
               <v-card-text>
-                <v-card light>
-                  <v-card-text>
-                    Мы постоянно развиваемся и совершенствуем наши интерактивные
-                    сервисы созданные для Вашего удобства.
-                  </v-card-text>
-                  <v-divider />
-                  <v-card-text>
-                    Сервис
-                    <strong>"Каталог"</strong> поможет подобрать аксессуары и
-                    детали необходимые для ремонта Вашего устройства и узнать их
-                    атуальную стоимость.
-                  </v-card-text>
-                  <v-card-actions>
-                    <v-btn
-                      color="secondary"
-                      style="justify-content: flex-start"
-                      block
-                      nuxt
-                      to="/catalogue"
-                      dark
-                      class="font-weight-black"
-                    >
-                      <v-icon class="pr-2">{{ mdiCellphoneCog }}</v-icon>
-                      Каталог
-                    </v-btn>
-                  </v-card-actions>
-                  <v-card-text>
-                    Сервис
-                    <strong>"Калькулятор"</strong> поможет Вам предварительно
-                    рассчитать стоимость ремонта Вашего устройства.
-                  </v-card-text>
-                  <v-card-actions>
-                    <v-btn
-                      color="secondary"
-                      style="justify-content: flex-start"
-                      block
-                      nuxt
-                      to="/calculator"
-                      dark
-                      class="font-weight-black"
-                    >
-                      <v-icon class="pr-2">{{ mdiCalculator }}</v-icon>
-                      Калькулятор
-                    </v-btn>
-                  </v-card-actions>
-                </v-card>
+                Мы постоянно развиваемся и совершенствуем наши интерактивные
+                сервисы созданные для Вашего удобства.
               </v-card-text>
+              <v-divider />
+              <v-card-text>
+                Сервис
+                <strong>"Каталог"</strong> поможет подобрать аксессуары и детали
+                необходимые для ремонта Вашего устройства и узнать их атуальную
+                стоимость.
+              </v-card-text>
+              <v-card-actions>
+                <v-btn
+                  color="secondary"
+                  style="justify-content: flex-start"
+                  block
+                  nuxt
+                  to="/catalogue"
+                  dark
+                  class="font-weight-black"
+                >
+                  <v-icon class="pr-2">{{ mdiCellphoneCog }}</v-icon>
+                  Каталог
+                </v-btn>
+              </v-card-actions>
+              <v-card-text>
+                Сервис
+                <strong>"Калькулятор"</strong> поможет Вам предварительно
+                рассчитать стоимость ремонта Вашего устройства.
+              </v-card-text>
+              <v-card-actions>
+                <v-btn
+                  color="secondary"
+                  style="justify-content: flex-start"
+                  block
+                  nuxt
+                  to="/calculator"
+                  dark
+                  class="font-weight-black"
+                >
+                  <v-icon class="pr-2">{{ mdiCalculator }}</v-icon>
+                  Калькулятор
+                </v-btn>
+              </v-card-actions>
             </v-card>
-          </v-col>
-          <v-col cols="12">
-            <list-contacts />
-          </v-col>
-        </v-row>
+          </v-card-text>
+        </v-card>
+      </v-col>
+
+      <v-col xl="8" offset-xl="2" class="pt-0">
+        <list-contacts />
       </v-col>
     </v-row>
   </v-container>
